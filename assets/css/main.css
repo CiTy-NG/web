@@ -3442,6 +3442,7 @@ input, select, textarea {
 
 			#banner > .inner header {
 				width: auto;
+				text-align: center;
 			}
 
 				#banner > .inner header > :first-child {
@@ -3451,6 +3452,22 @@ input, select, textarea {
 					#banner > .inner header > :first-child:after {
 						max-width: 100%;
 					}
+							/* Additional styles for header text alignment and spacing */
+				#banner > .inner header h1,
+				#banner > .inner header h2 {
+				    margin: 0;
+				    padding: 0;
+				}
+				
+				#banner > .inner header h1 {
+				    border-bottom: 0; /* Removes any bottom border if present */
+				    margin-bottom: 0; /* Ensures no extra margin below */
+				    padding-bottom: 0; /* Ensures no extra padding below */
+				}
+				
+				#banner > .inner header h1 + h2 {
+				    margin-top: 0; /* Remove any margin at the top of h2 */
+				}
 
 			#banner > .inner .content {
 				display: -moz-flex;
