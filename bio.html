@@ -47,31 +47,32 @@
 									</header>
 
 									<!-- Content -->
-										<h2 id="content">Sample Content</h2>
-										<p>Praesent ac adipiscing ullamcorper semper ut amet ac risus. Lorem sapien ut odio odio nunc. Ac adipiscing nibh porttitor erat risus justo adipiscing adipiscing amet placerat accumsan. Vis. Faucibus odio magna tempus adipiscing a non. In mi primis arcu ut non accumsan vivamus ac blandit adipiscing adipiscing arcu metus praesent turpis eu ac lacinia nunc ac commodo gravida adipiscing eget accumsan ac nunc adipiscing adipiscing.</p>
-										<div class="row">
+										<h2 id="content">Hvem er jeg?</h2>
+										<p>My name is Christian Nielsen Garcia, and I'm currently a PhD student at the University of California, Los Angeles (UCLA). My research revolves around leveraging digital tools to foster a freer, more democratic, and—quite frankly—cooler society. Within the academic world, I navigate realms like Computational Social Science, Computer-Supported Cooperative Work (CSCW), Human-Computer Interaction (HCI), and Data Studies. However, I prefer to describe my work differently: I spend my time exploring the intersection between the digital information structures we inhabit and the relationships between individuals and their collectives. Through this intersection, I investigate the co-production of technology and people, and I strive to imagine ways that machines and humans can collaborate to create free and awesome utopias.</p>
+										<p>I’m well aware of the idealistic tone in that description of my work, so let me ground it away from the "metaversical" ideals by giving you a sense of what I actually do. My work spans two broad categories:</p>
+									<div class="row">
 											<div class="col-6 col-12-small">
-												<h3>Sem turpis amet semper</h3>
-												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac. Semper adipiscing varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+												<h3>Uno - Academic Inquiry and Expression</h3>
+												<p>The first involves academic research and its dissemination. This, of course, includes traditional papers and articles, but it also extends to video essays, website-essays, online courses, and decentralized digital courses. Some of these projects play with the conventional assumptions about how researchers should share their work.</p>
 											</div>
 											<div class="col-6 col-12-small">
-												<h3>Magna odio tempus commodo</h3>
-												<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor. Ante commodo blandit adipiscing integer semper orci eget. Faucibus commodo adipiscing mi eu nullam accumsan morbi arcu ornare odio mi adipiscing nascetur lacus ac interdum morbi accumsan vis mi accumsan ac praesent.</p>
-											</div>
-											<!-- Break -->
-											<div class="col-4 col-12-medium">
-												<h3>Interdum sapien gravida</h3>
-												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-											</div>
-											<div class="col-4 col-12-medium">
-												<h3>Faucibus consequat lorem</h3>
-												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-											</div>
-											<div class="col-4 col-12-medium">
-												<h3>Accumsan montes viverra</h3>
-												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+												<h3>Due - Building Tools for Digital-Social Empowerment</h3>
+												<p>The second category encompasses tools or creative/interactive works designed for users, with the goal of empowering them as the foundation for a freer digital society. These tools are often designed from the ground up, informed by the concepts and discussions that I also research—such as digital society, automation, decentralization, and the rhizomatic effects of these factors on our ability to realize digital dreams of a freer, cooler, and more badass society.</p>
 											</div>
 										</div>
+									<!-- Password-protected PDF Viewer -->
+									<div class="pdf-viewer">
+									    <h3>For a more detailed review of the things I have done, check out my CV</h3>
+									    <!-- Password Input Field -->
+									    <div id="password-container">
+									        <label for="password">Enter Password to View CV:</label>
+									        <input type="password" id="password" placeholder="Password">
+									        <button onclick="checkPassword()">View</button>
+									    </div>
+									
+									    <!-- PDF Iframe - Hidden Initially -->
+									    <iframe id="pdf-iframe" src="CTNG_CV_W2024.pdf" width="100%" height="600px" style="display: none;"></iframe>
+									</div>
 
 				<!-- Contact -->
 					<section id="contact">
@@ -152,6 +153,19 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			    function checkPassword() {
+			        var password = document.getElementById("password").value;
+			        var correctPassword = "kahkaaaah_goesthebird";
+			
+			        if (password === correctPassword) {
+			            document.getElementById("password-container").style.display = "none";
+			            document.getElementById("pdf-iframe").style.display = "block";
+			        } else {
+			            alert("Incorrect password. Please try again.");
+			        }
+			    }
+			</script>
 
 	</body>
 </html>
