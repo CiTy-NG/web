@@ -61,28 +61,19 @@
 											</div>
 										</div>
 									    
-									<!-- Email and Checkbox Form -->
-									    <div id="form-container">
-									        <h3>Access to CV</h3>
-									        <p>Enter your email and check the box to receive a password for viewing the CV:</p>
-									        <input type="email" id="email" placeholder="Enter your email">
-									        <input type="checkbox" id="human-check"> I am human
-									        <button onclick="generatePassword()">Submit</button>
-									    </div>
-									
-									    <!-- Password Entry -->
-									    <div id="password-container" style="display:none;">
-									        <p>Your password is: <span id="generated-password"></span></p>
-									        <p>Enter the password to view the CV:</p>
-									        <input type="text" id="entered-password" placeholder="Enter password">
-									        <button onclick="checkPassword()">View</button>
-									    </div>
-									
-									    <!-- PDF View -->
-									    <div id="pdf-container">
-									        <h3>For a more detailed review of the things I have done, check out my CV:</h3>
-									        <iframe src="CTNG_CV_W2024.pdf" width="100%" height="600px"></iframe>
-									    </div>
+									<!-- Password-protected PDF view -->
+									<div class="pdf-viewer">
+										<h3>For a more detailed review of the things I have done, check out my CV</h3>
+										<div id="password-container">
+											<p>Please enter the password to view the CV:</p>
+											<input type="password" id="password" placeholder="Enter password">
+											<button onclick="checkPassword()">View</button>
+										</div>
+										<div id="pdf-container" style="display:none;">
+											<iframe src="CTNG_CV_W2024.pdf" width="100%" height="600px"></iframe>
+										</div>
+									</div>
+
 									
 				<!-- Contact -->
 					<section id="contact">
@@ -164,38 +155,20 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-			        let generatedPassword = '';
+				function checkPassword() {
+					const passwordInput = document.getElementById('password').value;
+					const correctPassword = 'kahkaaaah_goesthebird';
+					const pdfContainer = document.getElementById('pdf-container');
+					const passwordContainer = document.getElementById('password-container');
 			
-			        function generatePassword() {
-			            const email = document.getElementById('email').value;
-			            const checkbox = document.getElementById('human-check').checked;
-			
-			            if (email && checkbox) {
-			                // Generate a 6-digit number
-			                generatedPassword = Math.floor(100000 + Math.random() * 900000).toString();
-			                
-			                // Display the generated password
-			                document.getElementById('generated-password').textContent = generatedPassword;
-			                
-			                // Hide form and show password input section
-			                document.getElementById('form-container').style.display = 'none';
-			                document.getElementById('password-container').style.display = 'block';
-			            } else {
-			                alert('Please enter your email and confirm you are human.');
-			            }
-			        }
-			
-			        function checkPassword() {
-			            const enteredPassword = document.getElementById('entered-password').value;
-			
-			            if (enteredPassword === generatedPassword) {
-			                document.getElementById('pdf-container').style.display = 'block';
-			                document.getElementById('password-container').style.display = 'none';
-			            } else {
-			                alert('Incorrect password. Please try again.');
-			            }
-			        }
-			    </script>
+					if (passwordInput === correctPassword) {
+						passwordContainer.style.display = 'none';
+						pdfContainer.style.display = 'block';
+					} else {
+						alert('Incorrect password. Please try again.');
+					}
+				}
+			</script>
 
 
 	</body>
