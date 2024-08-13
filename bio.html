@@ -1,175 +1,177 @@
 <!DOCTYPE HTML>
-<!--
-
--->
 <html>
-	<head>
-		<title>CNG - bio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>CNG - bio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo"><strong>CNG</strong> <span>bio</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo"><strong>CNG</strong> <span>bio</span></a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button fit">Log In</a></li>
-						</ul>
-					</nav>
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="landing.html">Landing</a></li>
+                <li><a href="generic.html">Generic</a></li>
+                <li><a href="elements.html">Elements</a></li>
+            </ul>
+            <ul class="actions stacked">
+                <li><a href="#" class="button fit">Log In</a></li>
+            </ul>
+        </nav>
 
-				<!-- Main -->
-					<div id="main" class="alt">
+        <!-- Main -->
+        <div id="main" class="alt">
+            <!-- One -->
+            <section id="one">
+                <div class="inner">
+                    <header class="major">
+                        <h1>Bio</h1>
+                    </header>
 
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h1>Bio</h1>
-									</header>
+                    <!-- Content -->
+                    <h2 id="content">Hvem er jeg?</h2>
+                    <p>My name is Christian Nielsen Garcia, and I'm currently a PhD student at the University of California, Los Angeles (UCLA). My research revolves around leveraging digital tools to foster a freer, more democratic, and—quite frankly—cooler society...</p>
+                    
+                    <div class="row">
+                        <div class="col-6 col-12-small">
+                            <h3>Uno - Academic Inquiry and Expression</h3>
+                            <p>The first involves academic research and its dissemination...</p>
+                        </div>
+                        <div class="col-6 col-12-small">
+                            <h3>Due - Building Tools for Digital-Social Empowerment</h3>
+                            <p>The second category encompasses tools or creative/interactive works...</p>
+                        </div>
+                    </div>
 
-									<!-- Content -->
-										<h2 id="content">Hvem er jeg?</h2>
-										<p>My name is Christian Nielsen Garcia, and I'm currently a PhD student at the University of California, Los Angeles (UCLA). My research revolves around leveraging digital tools to foster a freer, more democratic, and—quite frankly—cooler society. Within the academic world, I navigate realms like Computational Social Science, Computer-Supported Cooperative Work (CSCW), Human-Computer Interaction (HCI), and Data Studies. However, I prefer to describe my work differently: I spend my time exploring the intersection between the digital information structures we inhabit and the relationships between individuals and their collectives. Through this intersection, I investigate the co-production of technology and people, and I strive to imagine ways that machines and humans can collaborate to create free and awesome utopias.</p>
-										<p>I’m well aware of the idealistic tone in that description of my work, so let me ground it away from the "metaversical" ideals by giving you a sense of what I actually do. My work spans two broad categories:</p>
-									<div class="row">
-											<div class="col-6 col-12-small">
-												<h3>Uno - Academic Inquiry and Expression</h3>
-												<p>The first involves academic research and its dissemination. This, of course, includes traditional papers and articles, but it also extends to video essays, website-essays, online courses, and decentralized digital courses. Some of these projects play with the conventional assumptions about how researchers should share their work.</p>
-											</div>
-											<div class="col-6 col-12-small">
-												<h3>Due - Building Tools for Digital-Social Empowerment</h3>
-												<p>The second category encompasses tools or creative/interactive works designed for users, with the goal of empowering them as the foundation for a freer digital society. These tools are often designed from the ground up, informed by the concepts and discussions that I also research—such as digital society, automation, decentralization, and the rhizomatic effects of these factors on our ability to realize digital dreams of a freer, cooler, and more badass society.</p>
-											</div>
-										</div>
-									    
-									<!-- Password-protected PDF view -->
-									<div class="pdf-viewer">
-										<h3>For a more detailed review of the things I have done, check out my CV</h3>
-										<div id="password-container">
-											<p>Please enter the password to view the CV:</p>
-											<input type="password" id="password" placeholder="Enter password">
-											<button onclick="checkPassword()">View</button>
-										</div>
-										<div id="pdf-container" style="display:none;">
-											<iframe src="CTNG_CV_W2024.pdf" width="100%" height="600px"></iframe>
-										</div>
-									</div>
+                    <!-- Password-protected PDF view -->
+                    <div class="pdf-viewer">
+                        <h3>For a more detailed review of the things I have done, check out my CV</h3>
+                        <div id="verification-container">
+                            <p>Please enter your full name and check the box to view the CV:</p>
+                            <input type="text" id="full-name" placeholder="Enter your full name">
+                            <div class="col-6 col-12-small">
+                                <input type="checkbox" id="demo-human" name="demo-human">
+                                <label for="demo-human">I am a human</label>
+                            </div>
+                            <button onclick="checkVerification()">View CV</button>
+                        </div>
+                        <div id="pdf-container" style="display:none;">
+                            <iframe src="CTNG_CV_W2024.pdf" width="100%" height="600px"></iframe>
+                        </div>
+                    </div>
 
-									
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">information@untitled.tld</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
+                    <!-- Contact -->
+                    <section id="contact">
+                        <div class="inner">
+                            <section>
+                                <form method="post" action="#">
+                                    <div class="fields">
+                                        <div class="field half">
+                                            <label for="name">Name</label>
+                                            <input type="text" name="name" id="name" />
+                                        </div>
+                                        <div class="field half">
+                                            <label for="email">Email</label>
+                                            <input type="text" name="email" id="email" />
+                                        </div>
+                                        <div class="field">
+                                            <label for="message">Message</label>
+                                            <textarea name="message" id="message" rows="6"></textarea>
+                                        </div>
+                                    </div>
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Send Message" class="primary" /></li>
+                                        <li><input type="reset" value="Clear" /></li>
+                                    </ul>
+                                </form>
+                            </section>
+                            <section class="split">
+                                <section>
+                                    <div class="contact-method">
+                                        <span class="icon solid alt fa-envelope"></span>
+                                        <h3>Email</h3>
+                                        <a href="#">information@untitled.tld</a>
+                                    </div>
+                                </section>
+                                <section>
+                                    <div class="contact-method">
+                                        <span class="icon solid alt fa-phone"></span>
+                                        <h3>Phone</h3>
+                                        <span>(000) 000-0000 x12387</span>
+                                    </div>
+                                </section>
+                                <section>
+                                    <div class="contact-method">
+                                        <span class="icon solid alt fa-home"></span>
+                                        <h3>Address</h3>
+                                        <span>1234 Somewhere Road #5432<br />
+                                        Nashville, TN 00000<br />
+                                        United States of America</span>
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                    </section>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+                    <!-- Footer -->
+                    <footer id="footer">
+                        <div class="inner">
+                            <ul class="icons">
+                                <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                                <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                                <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                            </ul>
+                            <ul class="copyright">
+                                <li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+                            </ul>
+                        </div>
+                    </footer>
 
-			</div>
+                </div>
+            </section>
+        </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script>
-				function checkPassword() {
-					const passwordInput = document.getElementById('password').value;
-					const correctPassword = 'kahkaaaah_goesthebird';
-					const pdfContainer = document.getElementById('pdf-container');
-					const passwordContainer = document.getElementById('password-container');
-			
-					if (passwordInput === correctPassword) {
-						passwordContainer.style.display = 'none';
-						pdfContainer.style.display = 'block';
-					} else {
-						alert('Incorrect password. Please try again.');
-					}
-				}
-			</script>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+            function checkVerification() {
+                const nameInput = document.getElementById('full-name').value.trim();
+                const checkbox = document.getElementById('demo-human').checked;
+                const pdfContainer = document.getElementById('pdf-container');
+                const verificationContainer = document.getElementById('verification-container');
 
+                if (nameInput && checkbox) {
+                    // Show the password-protected content
+                    verificationContainer.style.display = 'none';
+                    pdfContainer.style.display = 'block';
+                } else {
+                    // Alert the user if the conditions are not met
+                    alert('Please enter your full name and check the box to proceed.');
+                }
+            }
+        </script>
 
-	</body>
+    </body>
 </html>
