@@ -60,7 +60,7 @@
 												<p>The second category encompasses tools or creative/interactive works designed for users, with the goal of empowering them as the foundation for a freer digital society. These tools are often designed from the ground up, informed by the concepts and discussions that I also research—such as digital society, automation, decentralization, and the rhizomatic effects of these factors on our ability to realize digital dreams of a freer, cooler, and more badass society.</p>
 											</div>
 										</div>
-									
+									    
 									<!-- Email and Checkbox Form -->
 									    <div id="form-container">
 									        <h3>Access to CV</h3>
@@ -70,18 +70,20 @@
 									        <button onclick="generatePassword()">Submit</button>
 									    </div>
 									
-									    <!-- Password-protected PDF view -->
+									    <!-- Password Entry -->
 									    <div id="password-container" style="display:none;">
-									        <p>Enter the password sent to your email to view the CV:</p>
+									        <p>Your password is: <span id="generated-password"></span></p>
+									        <p>Enter the password to view the CV:</p>
 									        <input type="text" id="entered-password" placeholder="Enter password">
 									        <button onclick="checkPassword()">View</button>
 									    </div>
 									
+									    <!-- PDF View -->
 									    <div id="pdf-container">
 									        <h3>For a more detailed review of the things I have done, check out my CV:</h3>
 									        <iframe src="CTNG_CV_W2024.pdf" width="100%" height="600px"></iframe>
 									    </div>
-
+									
 				<!-- Contact -->
 					<section id="contact">
 						<div class="inner">
@@ -162,33 +164,39 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-				let generatedPassword = '';
+			        let generatedPassword = '';
 			
-				function generatePassword() {
-				    const email = document.getElementById('email').value;
-				    const checkbox = document.getElementById('human-check').checked;
+			        function generatePassword() {
+			            const email = document.getElementById('email').value;
+			            const checkbox = document.getElementById('human-check').checked;
 			
-				    if (email && checkbox) {
-					generatedPassword = Math.floor(100000 + Math.random() * 900000).toString(); // Generate a 6-digit number
-					alert(`Your password is: ${generatedPassword}`);
-					document.getElementById('form-container').style.display = 'none';
-					document.getElementById('password-container').style.display = 'block';
-				    } else {
-					alert('Please enter your email and confirm you are human.');
-				    }
-				}
+			            if (email && checkbox) {
+			                // Generate a 6-digit number
+			                generatedPassword = Math.floor(100000 + Math.random() * 900000).toString();
+			                
+			                // Display the generated password
+			                document.getElementById('generated-password').textContent = generatedPassword;
+			                
+			                // Hide form and show password input section
+			                document.getElementById('form-container').style.display = 'none';
+			                document.getElementById('password-container').style.display = 'block';
+			            } else {
+			                alert('Please enter your email and confirm you are human.');
+			            }
+			        }
 			
-				function checkPassword() {
-				    const enteredPassword = document.getElementById('entered-password').value;
+			        function checkPassword() {
+			            const enteredPassword = document.getElementById('entered-password').value;
 			
-				    if (enteredPassword === generatedPassword) {
-					document.getElementById('pdf-container').style.display = 'block';
-					document.getElementById('password-container').style.display = 'none';
-				    } else {
-					alert('Incorrect password. Please try again.');
-				    }
-				}
+			            if (enteredPassword === generatedPassword) {
+			                document.getElementById('pdf-container').style.display = 'block';
+			                document.getElementById('password-container').style.display = 'none';
+			            } else {
+			                alert('Incorrect password. Please try again.');
+			            }
+			        }
 			    </script>
+
 
 	</body>
 </html>
