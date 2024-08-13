@@ -2164,10 +2164,16 @@ input, select, textarea {
 		border: 0;
 		display: inline-block;
 		position: relative;
+		width: 100%;
+		overflow: hidden;
+		
 	}
 
 		.image img {
 			display: block;
+			width: 100%; /* Ensure image fits container width */
+			height: auto; /* Maintain aspect ratio */
+			object-fit: cover; /* Ensure image covers container */
 		}
 
 		.image.left, .image.right {
