@@ -9,7 +9,26 @@
     <style>
         .content-section { display: none; }
         .content-section.active { display: block; }
-        .menu-item { cursor: pointer; color: blue; text-decoration: underline; margin: 5px 0; }
+
+        #side-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .menu-item {
+            cursor: pointer;
+            padding: 10px;
+            border: 2px solid #007BFF; /* Change color as needed */
+            border-radius: 5px;
+            background-color: #f0f8ff; /* Light background color */
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .menu-item:hover {
+            background-color: #e0f0ff; /* Change color on hover */
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -52,7 +71,7 @@
                     <h1>Understanding the Two Digital Divides, Digital Rights, and Data Justice in Los Angeles</h1>
                 </header>
                 <p>Your introductory content here...</p>
-                
+
                 <!-- Side Menu -->
                 <div id="side-menu">
                     <div class="menu-item" onclick="showSection('firstDigitalDivide')">LA’s First Digital Divide</div>
