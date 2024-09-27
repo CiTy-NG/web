@@ -96,7 +96,12 @@
                     <h3>Attewell’s two Digital Divides</h3>
                     <p>A widely used framework for discussing the evolution of Digital Divide discourse is Paul Attewell’s two-level description of the Digital Divide (Attewell 2001). This framework complicates the early critique of digital inequalities, which previously saw access and adoption as unquestioned improvements. Attewell highlighted that even when access is available, disparities in skills and opportunities persist. He termed access-related inequalities as the "First Digital Divide" and described subsequent disparities in usage, skills, and the benefits gained from digital access as the "Second Digital Divide."</p>
                     <p>Regarding the First Digital Divide, various studies have shown that limitations to access align with demographic factors linked to structural inequities. Census data from Los Angeles reveals that, while digital device adoption and internet access have improved over time, demographic disparities persist. For instance, a multivariate linear regression of 2022 ACS data shows that lower-income households, often with higher representation of people of color, still experience less digital access compared to wealthier, predominantly white families in LA County.</p>
-                    <p>[insert regs]</p>
+                    <div class="image-container">
+                        <img src="olsCumul.png" alt="Digital Divide Image 1">
+                        <img src="olsRace.png" alt="Digital Divide Image 2">
+                        <img src="olsClass.png" alt="Digital Divide Image 3">
+                        <img src="olsGener.png" alt="Digital Divide Image 4">
+                    </div>
                     <p>Interestingly, generational data reveals that Gen X and Boomer households tend to have more access than younger generations like Gen Z and Millennials, contradicting earlier findings that younger populations were more likely to adopt digital technologies. This is likely influenced by mediating factors such as income class, with wealthier families, who tend to have fewer children, experiencing greater access overall. Nevertheless, income and class remain significant moderators of access at the county level.</p>
                     <h3>LA Digital Divide Map</h3>
                     <p>Already, scholars have begun to look beyond simple questions of access. By identifying disparities in the use and skills applied once access has been attained, we can see these conversations resonate with insights from Science and Technology Studies (STS) and other fields questioning the co-productive relationship between society and technology (Light 2009).</p>
@@ -112,9 +117,9 @@
                     <p>Of course, the census faces controversies, often reproducing inequities through its simplified representations of diverse populations into predetermined numerical and nominal categories—a process known as datafication. For a more in-depth discussion, please visit our Ethics section.</p>
                     <p>To collect ACS data, I used Python to query the ACS API, starting with requests for variable names and descriptions to navigate the often confusing Census Variable Naming System.</p>
                     <p>Variable names typically begin with a letter prefix indicating the data type, followed by numbers and suffixes for specific characteristics. For example, B28002_001E represents the total estimate (E) for computer ownership from table B28002. This system ensures consistency across datasets and facilitates efficient data processing.</p>
-                    <p>[and maybe naming example?]</p>
+                    <img src="censusTableV.png" alt="api" class="single-image">
                     <p>My research focused on demographic features (wealth, race, ethnicity, sex, generation) for a specific geographical region (LA County), resulting in the following API call.</p>
-                    <p>[api call]</p>
+                    <img src="apiCall.png" alt="api" class="single-image">
                     <p>In my case, the data points on age were overly granular, leading me to represent wealth through relative class categories (e.g., Upper Class, Upper-Middle Class) rather than numerical figures. I subsequently cleaned and transformed my data tables. To replicate this process, you can follow these transformations:</p>
                     <li>[list of transformations]</li>
                     <li>[Screenshot of transformations]</li>
