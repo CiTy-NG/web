@@ -40,7 +40,7 @@
             <section id="one">
                 <div class="inner">
                     <header class="major">
-                        <h1><span style="color: #0056b3; font-weight: bold;">Biography</span></h1>
+                        <h1><span style="font-weight: bold;">Biography</span></h1>
                     </header>
 
                     <!-- Interactive Content -->
@@ -61,7 +61,7 @@
                     </div>
 
                     <!-- Current Work Section -->
-                    <h2 id="current-work"><span style="color: #0056b3; font-weight: bold;">Current Work</span></h2>
+                    <h2 id="current-work"><span style="font-weight: bold;">Current Work</span></h2>
                     <div class="row">
                         <div class="col-6 col-12-small">
                             <h3><span class="toggle-header" onclick="toggleContent('daos')">Innovative Metrics for DAOs</span></h3>
@@ -75,6 +75,24 @@
                                 I am also developing tools that treat political antagonism as a valuable asset in decision-making, contributing to frameworks that foster efficient collective intelligence and innovation in digital governance. These efforts align with my broader commitment to advancing sustainable, accountable, and participatory governance models, both online and offline.
                             </p>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <!-- Password-Protected PDF Viewer -->
+                <div class="pdf-viewer">
+                    <h3>For a more detailed review of the things I have done, check out my CV</h3>
+                    <div id="verification-container">
+                        <p>Please enter your full name and check the box to view the CV:</p>
+                        <input type="text" id="full-name" placeholder="Enter your full name">
+                        <div class="col-6 col-12-small">
+                            <input type="checkbox" id="demo-human" name="demo-human">
+                            <label for="demo-human">I am a human</label>
+                        </div>
+                        <button onclick="checkVerification()">View CV</button>
+                    </div>
+                    <div id="pdf-container" style="display:none;">
+                        <iframe src="CTNG_CV_F2024.pdf" width="100%" height="600px"></iframe>
                     </div>
                 </div>
             </section>
@@ -99,13 +117,29 @@
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/main.js"></script>
         <script>
+            // Function to toggle content visibility
             function toggleContent(id) {
                 const content = document.getElementById(id);
                 content.style.display = content.style.display === 'none' ? 'block' : 'none';
             }
-
-            // Hide all content by default
+        
+            // Initialize content to be hidden
             document.querySelectorAll('.toggle-content').forEach(el => el.style.display = 'none');
+        
+            // Function for PDF viewer verification
+            function checkVerification() {
+                const nameInput = document.getElementById('full-name').value.trim();
+                const checkbox = document.getElementById('demo-human').checked;
+                const pdfContainer = document.getElementById('pdf-container');
+                const verificationContainer = document.getElementById('verification-container');
+        
+                if (nameInput && checkbox) {
+                    verificationContainer.style.display = 'none';
+                    pdfContainer.style.display = 'block';
+                } else {
+                    alert('Please enter your full name and check the box to proceed.');
+                }
+            }
         </script>
 
     </body>
