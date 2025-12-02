@@ -1,124 +1,227 @@
 <!DOCTYPE HTML>
-<!--
-
--->
 <html>
-	<head>
-		<title>CNG - Publications</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>CNG - Publications</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/minimal.css" />
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo"><strong>CNG</strong> <span>Publications</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+        <!-- Header -->
+        <header id="header">
+            <div class="name">Christian Nielsen Garcia</div>
+            <nav>
+                <a href="bio.html">About</a>
+                <a href="publications.html" class="active">Publications</a>
+                <a href="tools.html">Stuff</a>
+            </nav>
+        </header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="bio.html">Bio</a></li>
-							<li><a href="beyondBio.html">BeyondBio</a></li>
-							<li><a href="publications.html">Publications</a></li>
-							<li><a href="tools.html">Tools & Software</a></li>
-							
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button fit">Log In</a></li>
-						</ul>
-					</nav>
+        <!-- Main -->
+        <div id="main">
 
-				<!-- Main -->
-					<div id="main" class="alt">
+            <!-- Left Column -->
+            <div>
+                <!-- Profile Section -->
+                <section class="profile-section">
+                    <div class="profile-image-container">
+                        <!-- Profile Image -->
+                        <img src="images/UCLA_HS_CNG.JPG" alt="Christian Nielsen Garcia" class="profile-image" />
+                        
+                        <!-- Introduction Text -->
+                        <div class="intro-text">
+                            <p class="intro-prefix">I am an Information Scientist with a passion for</p>
+                            <p class="intro-main">automation, decentralization, and digital protocols for political emancipation</p>
+                        </div>
+                        
+                        <!-- Degrees Section -->
+                        <div class="degrees-section">
+                            <h2 class="degrees-title">Degrees</h2>
+                            <div class="degrees-list">
+                                <p>PhD Student in Information Studies, UCLA (current)</p>
+                                <p>MSc in Social Data Science, University of Copenhagen</p>
+                                <p>BA in Performing and Media Arts, Cornell University</p>
+                                <p class="ba-details">(Focus: Digital Media; Minors: Anthropology, Comparative Literature)</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h1>Publications and written works</h1>
-									</header>
-									<span class="image main"><img src="images/cover_pic.png" alt="" /></span>
-									<p>Some pof my linked publications</p>
-								</div>
-							</section>
-            
-            <!-- Two -->
-							<section id="two" class="spotlights">
-								<section>
-									<a href="https://medium.com/flipside-governance/we-read-59-000-dao-forum-posts-so-you-dont-have-to-5e4c516c8a24" class="image">
-										<img src="images/flipsideArticle_screenshot.png" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>On Computational Discourse Analyses in DAOs - Article for Flipside Governance</h3>
-											</header>
-											<p>This study leverages advanced language modeling to analyze 59,000 forum posts from 15 decentralized autonomous organizations (DAOs), aiming to identify prevalent governance topics within these communities. Given the vast volume of discourse and the challenges of staying informed, this research highlights the value of computational discourse analysis in uncovering significant themes. Key findings reveal that DAO discussions predominantly focus on two broad categories: scalability issues and governance participation. Under scalability, topics include transaction fees, scaling solutions, and cross-chain interoperability. For governance participation, discussions center on delegation concerns, incentivization, and delegate compensation. This preliminary analysis underscores the importance of computational methods in distilling actionable insights from DAO discussions, offering a streamlined approach for stakeholders to engage with current governance debates and trends.</p>
-											<ul class="actions">
-												<li><a href="https://medium.com/flipside-governance/we-read-59-000-dao-forum-posts-so-you-dont-have-to-5e4c516c8a24" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="https://www.caidp.org/about-2/research-group-2022-spring/" class="image">
-										<img src="images/caidp_aidv2022_screenshot.png" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>AIDVI Report for the CAIDP</h3>
-											</header>
-											<p>ERROR 420- You're early..? Construction in progress\nAssigned Luxembourg</p>
-											<ul class="actions">
-												<li><a href="https://www.caidp.org/about-2/research-group-2022-spring/" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								
-					</div>
-				<ul class="actions">
-					<li><a href="tools.html" class="button next">tools and software</a></li>
-				</ul>
+                <!-- CV Section -->
+                <section>
+                    <h2 class="cv-title">CV</h2>
+                    <div class="pdf-viewer">
+                        <div id="verification-container">
+                            <p>Please enter your full name and check the box to view the CV:</p>
+                            <input type="text" id="full-name" placeholder="Enter your full name">
+                            <div>
+                                <input type="checkbox" id="demo-human" name="demo-human">
+                                <label for="demo-human">I am a human</label>
+                            </div>
+                            <button onclick="checkVerification()">View CV</button>
+                        </div>
+                        <div id="cv-actions" style="display:none;">
+                            <div class="cv-buttons">
+                                <button onclick="printCV()" class="button">Print</button>
+                                <button onclick="downloadCV()" class="button">Download</button>
+                                <button onclick="maximizeCV()" class="button">Maximize</button>
+                            </div>
+                        </div>
+                        <div id="pdf-overlay" style="display:none;">
+                            <div class="pdf-overlay-content">
+                                <button onclick="closeMaximize()" class="close-button">×</button>
+                                <iframe src="CTNG_CV_F2025.pdf" width="100%" height="100%"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
 
-        
-     			<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+            <!-- Right Column -->
+            <div class="main-content">
+            <section id="one">
+                <div class="inner">
+                    <header>
+                        <h1>Publications and written works</h1>
+                    </header>
+                </div>
+            </section>
 
-			</div>
+            <section id="two" class="spotlights">
+                <section>
+                    <a href="https://arxiv.org/abs/2510.07575" class="image">
+                        <img src="images/PeerBenchPrePrnt.png" alt="" />
+                    </a>
+                    <div class="content">
+                        <div class="inner">
+                            <h3>Benchmarking is Broken -- Don't Let AI be its Own Judge</h3>
+                            <p>Benchmarking is Broken — Don't Let AI Be Its Own Judge (NeurIPS 2025) — A position paper advocating for a unified and transparent framework to evaluate AI systems. I contributed to the design of PeerBench, a community-governed model for trustworthy AI benchmarking. Preprint available on arXiv.</p>
+                            <p><strong>Co-authors:</strong> Zerui Cheng, Stella Wohnig, Ruchika Gupta, Samiul Alam, Tassallah Abdullahi, João Alves Ribeiro, Saif Mir, Siran Li, Jason Orender, Seyed Ali Bahrainian, Daniel Kirste, Aaron Gokaslan, Mikołaj Glinka, Carsten Eickhoff, Ruben Wolff</p>
+                            <ul class="actions">
+                                <li><a href="https://arxiv.org/abs/2510.07575" class="button">Learn more</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <a href="https://medium.com/flipside-governance/we-read-59-000-dao-forum-posts-so-you-dont-have-to-5e4c516c8a24" class="image">
+                        <img src="images/flipsideArticle_screenshot.png" alt="" />
+                    </a>
+                    <div class="content">
+                        <div class="inner">
+                            <h3>On Computational Discourse Analyses in DAOs - Article for Flipside Governance</h3>
+                            <p>This study leverages advanced language modeling to analyze 59,000 forum posts from 15 decentralized autonomous organizations (DAOs), aiming to identify prevalent governance topics within these communities. Given the vast volume of discourse and the challenges of staying informed, this research highlights the value of computational discourse analysis in uncovering significant themes. Key findings reveal that DAO discussions predominantly focus on two broad categories: scalability issues and governance participation. Under scalability, topics include transaction fees, scaling solutions, and cross-chain interoperability. For governance participation, discussions center on delegation concerns, incentivization, and delegate compensation. This preliminary analysis underscores the importance of computational methods in distilling actionable insights from DAO discussions, offering a streamlined approach for stakeholders to engage with current governance debates and trends.</p>
+                            <ul class="actions">
+                                <li><a href="https://medium.com/flipside-governance/we-read-59-000-dao-forum-posts-so-you-dont-have-to-5e4c516c8a24" class="button">Learn more</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <a href="https://www.caidp.org/about-2/research-group-2022-spring/" class="image">
+                        <img src="images/caidp_aidv2022_screenshot.png" alt="" />
+                    </a>
+                    <div class="content">
+                        <div class="inner">
+                            <h3>AIDVI Report for the CAIDP</h3>
+                            <p>Artificial Intelligence and Democratic Values Index (AIDVI) — A global review of national AI governance frameworks produced by the Center for AI and Digital Policy. I contributed to the Luxembourg Country Report for the 2023 edition, focusing on ethical AI development and regulatory practices in Europe.</p>
+                            <ul class="actions">
+                                <li><a href="https://www.caidp.org/about-2/research-group-2022-spring/" class="button">Learn more</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        </div>
 
-	</body>
+        <div style="text-align: center; padding: 2rem 5%;">
+            <ul class="actions">
+                <li><a href="tools.html" class="button">Tools and software</a></li>
+            </ul>
+        </div>
+
+        <!-- News Ticker -->
+        <div id="news-ticker">
+            <div class="news-label">NEWS</div>
+            <div class="news-content">
+                <div class="news-scroll">
+                    <span class="news-item">[2026] Center for Digital Assets Research Award, UC Berkeley: Awarded competitive research funding for work at the intersection of AI, blockchain governance, and political theory. Funding supports empirical analysis and design research on decentralized decision-making systems.</span>
+                    <span class="news-item">[2025] NeurIPS Paper: "Benchmarking is Broken -- Don't Let AI be its Own Judge" accepted at NeurIPS 2025</span>
+                    <span class="news-item">[May 2025] Written Qualifying Examinations Passed for UCLA IS PhD doctoral program</span>
+                    <span class="news-item">[2025] RDI Award: Recognized for innovative research in decentralized governance</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="https://twitter.com/ChrisTN29" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/christianthomasnielsengarcia/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://medium.com/@ChrisTN29/" title="Medium"><i class="fab fa-medium"></i></a></li>
+                    <li><a href="https://scholar.google.com/citations?user=ilWxXUYAAAAJ&hl=en" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; 2024 Christian T. Nielsen Garcia</li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        function checkVerification() {
+            const nameInput = document.getElementById('full-name').value.trim();
+            const checkbox = document.getElementById('demo-human').checked;
+            const cvActions = document.getElementById('cv-actions');
+            const verificationContainer = document.getElementById('verification-container');
+
+            if (nameInput && checkbox) {
+                verificationContainer.style.display = 'none';
+                cvActions.style.display = 'block';
+            } else {
+                alert('Please enter your full name and check the box to proceed.');
+            }
+        }
+
+        function printCV() {
+            const pdfWindow = window.open('CTNG_CV_F2025.pdf', '_blank');
+            pdfWindow.onload = function() {
+                pdfWindow.print();
+            };
+        }
+
+        function downloadCV() {
+            const link = document.createElement('a');
+            link.href = 'CTNG_CV_F2025.pdf';
+            link.download = 'CTNG_CV_F2025.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function maximizeCV() {
+            const pdfOverlay = document.getElementById('pdf-overlay');
+            pdfOverlay.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMaximize() {
+            const pdfOverlay = document.getElementById('pdf-overlay');
+            pdfOverlay.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('load', function() {
+            document.body.classList.remove('is-preload');
+        });
+    </script>
+
+</body>
 </html>

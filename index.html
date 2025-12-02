@@ -1,183 +1,221 @@
 <!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Christian Nielsen Garcia</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Christian Nielsen Garcia</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/minimal.css" />
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <div id="wrapper">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>Christian</strong> <span>Nielsen Garcia</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+        <!-- Header -->
+        <header id="header">
+            <div class="name">Christian Nielsen Garcia</div>
+            <nav>
+                <a href="bio.html" class="active">About</a>
+                <a href="publications.html">Publications</a>
+                <a href="tools.html">Stuff</a>
+            </nav>
+        </header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="bio.html">Bio</a></li>
-							<li><a href="beyondBio.html">BeyondBio</a></li>
-							<li><a href="publications.html">Publications</a></li>
-							<li><a href="tools.html">Tools & Software</a></li>
-							
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button fit">Log In</a></li>
-						</ul>
-					</nav>
+        <!-- Main -->
+        <div id="main">
 
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h3>I am an Information Scientist with a passion for <h3>
-								<h1>automation, decentralization, and digital protocols for political emancipation</h1>
-							</header>
-							<div class="content">
-								<p> Surf this website to find research and tools intended to empower ProdUsers</p>
-								<ul class="actions">
-									<li><a href="#one" class="button next scrolly">Get Started</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
+            <!-- Left Column -->
+            <div>
+                <!-- Profile Section -->
+                <section class="profile-section">
+                    <div class="profile-image-container">
+                        <!-- Profile Image -->
+                        <img src="images/UCLA_HS_CNG.JPG" alt="Christian Nielsen Garcia" class="profile-image" />
+                        
+                        <!-- Introduction Text -->
+                        <div class="intro-text">
+                            <p class="intro-prefix">I am an Information Scientist with a passion for</p>
+                            <p class="intro-main">automation, decentralization, and digital protocols for political emancipation</p>
+                        </div>
+                        
+                        <!-- Degrees Section -->
+                        <div class="degrees-section">
+                            <h2 class="degrees-title">Degrees</h2>
+                            <div class="degrees-list">
+                                <p>PhD Student in Information Studies, UCLA (current)</p>
+                                <p>MSc in Social Data Science, University of Copenhagen</p>
+                                <p>BA in Performing and Media Arts, Cornell University</p>
+                                <p class="ba-details">(Focus: Digital Media; Minors: Anthropology, Comparative Literature)</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-				<!-- Main -->
-					<div id="main">
+                <!-- CV Section -->
+                <section>
+                    <h2 class="cv-title">CV</h2>
+                    <div class="pdf-viewer">
+                        <div id="verification-container">
+                            <p>Please enter your full name and check the box to view the CV:</p>
+                            <input type="text" id="full-name" placeholder="Enter your full name">
+                            <div>
+                                <input type="checkbox" id="demo-human" name="demo-human">
+                                <label for="demo-human">I am a human</label>
+                            </div>
+                            <button onclick="checkVerification()">View CV</button>
+                        </div>
+                        <div id="cv-actions" style="display:none;">
+                            <div class="cv-buttons">
+                                <button onclick="printCV()" class="button">Print</button>
+                                <button onclick="downloadCV()" class="button">Download</button>
+                                <button onclick="maximizeCV()" class="button">Maximize</button>
+                            </div>
+                        </div>
+                        <div id="pdf-overlay" style="display:none;">
+                            <div class="pdf-overlay-content">
+                                <button onclick="closeMaximize()" class="close-button">×</button>
+                                <iframe src="CTNG_CV_F2025.pdf" width="100%" height="100%"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
 
-						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/bioPic_web.png" alt="self blurry work desk" />
-									</span>
-									<header class="major">
-										<h3><a href="bio.html" class="link">Bio</a></h3>
-										<p>Research interests, credentials, and related stuff</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/snorkle.jpg" alt="snorkle snork" />
-									</span>
-									<header class="major">
-										<h3><a href="beyondBio.html" class="link">Beyond the Bio</a></h3>
-										<p>Some other things I love</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/Thesis_Screenshot.png" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="publications.html" class="link">Written works and publications</a></h3>
-										<p>-</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/LADJH_GIS_Prototype.png" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="tools.html" class="link">Tools and software</a></h3>
-										<p>-</p>
-									</header>
-								</article>
-								
+            <!-- Right Column -->
+            <div class="main-content">
+                <!-- One -->
+                <section id="one" class="tiles">
+                    <article>
+                        <a href="bio.html" class="image">
+                            <img src="images/bioPic_web.png" alt="self blurry work desk" />
+                        </a>
+                        <header>
+                            <h3><a href="bio.html">Bio</a></h3>
+                            <p>Research interests, credentials, and related stuff</p>
+                        </header>
+                    </article>
+                    <article>
+                        <a href="beyondBio.html" class="image">
+                            <img src="images/snorkle.jpg" alt="snorkle snork" />
+                        </a>
+                        <header>
+                            <h3><a href="beyondBio.html">Beyond the Bio</a></h3>
+                            <p>Some other things I love</p>
+                        </header>
+                    </article>
+                    <article>
+                        <a href="publications.html" class="image">
+                            <img src="images/Thesis_Screenshot.png" alt="" />
+                        </a>
+                        <header>
+                            <h3><a href="publications.html">Written works and publications</a></h3>
+                            <p>Research publications and written works</p>
+                        </header>
+                    </article>
+                    <article>
+                        <a href="tools.html" class="image">
+                            <img src="images/LADJH_GIS_Prototype.png" alt="" />
+                        </a>
+                        <header>
+                            <h3><a href="tools.html">Tools and software</a></h3>
+                            <p>Digital tools for political emancipation</p>
+                        </header>
+                    </article>
+                </section>
+            </div>
 
-						<!-- Two COMMENTED OUT STARTING HERE
-							<section id="two">
-								<div class="inner">
-									<header class="major">
-										<h2>Massa libero</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-									<ul class="actions">
-										<li><a href="landing.html" class="button next">Get Started</a></li>
-									</ul>
-								</div>
-							</section>
-						-->
-					</div>
+        </div>
 
-<!-- 				
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-		
-						</div>
-					</section> -->
+        <!-- News Ticker -->
+        <div id="news-ticker">
+            <div class="news-label">NEWS</div>
+            <div class="news-content">
+                <div class="news-scroll">
+                    <span class="news-item">[2026] Center for Digital Assets Research Award, UC Berkeley: Awarded competitive research funding for work at the intersection of AI, blockchain governance, and political theory. Funding supports empirical analysis and design research on decentralized decision-making systems.</span>
+                    <span class="news-item">[2025] NeurIPS Paper: "Benchmarking is Broken -- Don't Let AI be its Own Judge" accepted at NeurIPS 2025</span>
+                    <span class="news-item">[May 2025] Written Qualifying Examinations Passed for UCLA IS PhD doctoral program</span>
+                    <span class="news-item">[2025] RDI Award: Recognized for innovative research in decentralized governance</span>
+                </div>
+            </div>
+        </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href=#
-									    class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<!--"https://twitter.com/ChrisTN29"-->
-								<!--
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								-->
-								<li><a href="https://www.linkedin.com/in/christianthomasnielsengarcia/"
-									    class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://medium.com/@ChrisTN29/"
-									    class="icon brands alt fa-medium"><span class="label">Medium</span></a></li>
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="https://twitter.com/ChrisTN29" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/christianthomasnielsengarcia/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://medium.com/@ChrisTN29/" title="Medium"><i class="fab fa-medium"></i></a></li>
+                    <li><a href="https://scholar.google.com/citations?user=ilWxXUYAAAAJ&hl=en" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; 2024 Christian T. Nielsen Garcia</li>
+                </ul>
+            </div>
+        </footer>
 
-							</ul>
-							<ul class="copyright">
-							    <li>&copy; 2024 Christian T. Nielsen Garcia</li>
-							    <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+    </div>
 
-			</div>
+    <script>
+        // Set active menu item based on current page
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const menuLinks = document.querySelectorAll('#header nav a');
+        menuLinks.forEach(link => {
+            link.classList.remove('active');
+            if ((currentPage === 'index.html' || currentPage === 'bio.html') && link.textContent === 'About') {
+                link.classList.add('active');
+            } else if (currentPage === 'publications.html' && link.textContent === 'Publications') {
+                link.classList.add('active');
+            } else if (currentPage === 'tools.html' && link.textContent === 'Stuff') {
+                link.classList.add('active');
+            }
+        });
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        function checkVerification() {
+            const nameInput = document.getElementById('full-name').value.trim();
+            const checkbox = document.getElementById('demo-human').checked;
+            const cvActions = document.getElementById('cv-actions');
+            const verificationContainer = document.getElementById('verification-container');
 
-	</body>
+            if (nameInput && checkbox) {
+                verificationContainer.style.display = 'none';
+                cvActions.style.display = 'block';
+            } else {
+                alert('Please enter your full name and check the box to proceed.');
+            }
+        }
+
+        function printCV() {
+            const pdfWindow = window.open('CTNG_CV_F2025.pdf', '_blank');
+            pdfWindow.onload = function() {
+                pdfWindow.print();
+            };
+        }
+
+        function downloadCV() {
+            const link = document.createElement('a');
+            link.href = 'CTNG_CV_F2025.pdf';
+            link.download = 'CTNG_CV_F2025.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function maximizeCV() {
+            const pdfOverlay = document.getElementById('pdf-overlay');
+            pdfOverlay.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMaximize() {
+            const pdfOverlay = document.getElementById('pdf-overlay');
+            pdfOverlay.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('load', function() {
+            document.body.classList.remove('is-preload');
+        });
+    </script>
+
+</body>
 </html>
