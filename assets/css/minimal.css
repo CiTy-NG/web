@@ -82,19 +82,16 @@ a {
     border-bottom: none;
 }
 
-#header .name {
-    position: fixed;
-    top: 0;
-    left: 2rem;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1rem;
-    color: #00ff00;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    z-index: 1001;
+/* Profile Name - under profile image */
+.profile-name {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 #header nav {
@@ -892,11 +889,6 @@ section:last-child {
         justify-content: center;
     }
 
-    #header .name {
-        left: 1rem;
-        font-size: 0.85rem;
-        height: 50px;
-    }
 
     #header nav a {
         padding: 15px 20px;
