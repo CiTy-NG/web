@@ -903,9 +903,33 @@ section:last-child {
         font-size: 0.8rem;
     }
 
+    /* Single column layout for mobile - stack everything vertically */
     #main {
         margin-top: 50px;
+        grid-template-columns: 1fr;
+        gap: 0;
+        height: auto;
+        overflow: visible;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #main > div:first-child {
+        height: auto;
+        overflow: visible;
         padding: 2rem 5%;
+        position: relative;
+        top: auto;
+        order: 1;
+    }
+
+    #main > div:last-child {
+        height: auto;
+        overflow: visible;
+        padding: 2rem 5%;
+        order: 2;
     }
 
     #banner {
@@ -934,24 +958,29 @@ section:last-child {
         gap: 2rem;
     }
 
-    .profile-image {
-        width: 250px;
-        height: 250px;
+    /* Stack all content vertically on mobile */
+    .profile-section,
+    .degrees-section,
+    .pdf-viewer {
+        width: 100%;
+        margin-bottom: 2rem;
     }
 
-    #main {
-        grid-template-columns: 1fr;
-        gap: 0;
-        height: auto;
-        overflow: visible;
-        margin-bottom: 50px;
+    .profile-image-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    #main > div:first-child,
-    #main > div:last-child {
-        height: auto;
-        overflow: visible;
-        padding: 2rem 5%;
+    .section-blocks {
+        grid-template-columns: 1fr !important;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .top-section {
+        flex-direction: column;
     }
 
     #news-ticker {
@@ -968,12 +997,13 @@ section:last-child {
     }
 
     .profile-image {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
     }
 
     .profile-image-container {
         gap: 1.5rem;
+        flex-direction: column;
     }
 
     #footer .inner {
@@ -996,8 +1026,27 @@ section:last-child {
     }
 
     .profile-image {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Ensure everything fits on small screens */
+    #main > div:first-child,
+    #main > div:last-child {
+        padding: 1.5rem 3%;
+    }
+
+    .section-blocks {
+        gap: 1rem;
+    }
+
+    .toggle-header {
+        font-size: 0.8rem;
+        padding: 0.75rem;
+    }
+
+    .toggle-content {
+        padding: 1rem;
     }
 }
 
