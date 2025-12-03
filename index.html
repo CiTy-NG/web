@@ -1,14 +1,18 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Christian Nielsen Garcia</title>
+    <title>CNG - Bio</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta http-equiv="refresh" content="0; url=bio.html" />
     <link rel="stylesheet" href="assets/css/minimal.css" />
-    <script>
-        window.location.href = "bio.html";
-    </script>
+    <style>
+        .toggle-content {
+            display: none;
+        }
+        .toggle-content.active {
+            display: block;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -18,7 +22,7 @@
         <header id="header">
             <div class="name">Christian Nielsen Garcia</div>
             <nav>
-                <a href="bio.html" class="active">About</a>
+                <a href="index.html" class="active">About</a>
                 <a href="publications.html">Publications</a>
                 <a href="tools.html">Stuff</a>
             </nav>
@@ -86,45 +90,53 @@
 
             <!-- Right Column -->
             <div class="main-content">
-                <!-- One -->
-                <section id="one" class="tiles">
-                    <article>
-                        <a href="bio.html" class="image">
-                            <img src="images/bioPic_web.png" alt="self blurry work desk" />
-                        </a>
-                        <header>
-                            <h3><a href="bio.html">Bio</a></h3>
-                            <p>Research interests, credentials, and related stuff</p>
-                        </header>
-                    </article>
-                    <article>
-                        <a href="beyondBio.html" class="image">
-                            <img src="images/snorkle.jpg" alt="snorkle snork" />
-                        </a>
-                        <header>
-                            <h3><a href="beyondBio.html">Beyond the Bio</a></h3>
-                            <p>Some other things I love</p>
-                        </header>
-                    </article>
-                    <article>
-                        <a href="publications.html" class="image">
-                            <img src="images/Thesis_Screenshot.png" alt="" />
-                        </a>
-                        <header>
-                            <h3><a href="publications.html">Written works and publications</a></h3>
-                            <p>Research publications and written works</p>
-                        </header>
-                    </article>
-                    <article>
-                        <a href="tools.html" class="image">
-                            <img src="images/LADJH_GIS_Prototype.png" alt="" />
-                        </a>
-                        <header>
-                            <h3><a href="tools.html">Tools and software</a></h3>
-                            <p>Digital tools for political emancipation</p>
-                        </header>
-                    </article>
-                </section>
+            <section id="one">
+                <div class="inner">
+                    <h2 class="centered-header">WHO I AM</h2>
+                    <div class="section-blocks">
+                        <div>
+                            <div class="toggle-header" onclick="toggleContent('researcher')">
+                                RESEARCH INTERESTS
+                            </div>
+                            <div id="researcher" class="toggle-content">
+                                My research centers on how digital cooperation and decision-support systems shape political alignment and conflict, guiding how people coordinate, disagree, and negotiate belonging in decentralized or algorithmically mediated settings. My work is informed by conversations in knowledge infrastructures, computational social science, HCI, and CSCW concerning how digital systems structure collaboration and political agency.
+                            </div>
+                        </div>
+                        <div>
+                            <div class="toggle-header" onclick="toggleContent('academic')">
+                                ACADEMIA
+                            </div>
+                            <div id="academic" class="toggle-content">
+                                I am currently pursuing a PhD in Information Studies at UCLA under the supervision of Ramesh Srinivasan at the Digital Cultures Lab. I hold an MSc in Social Data Science from the University of Copenhagen, where my thesis analyzed the practices of 'decentralized governance' within blockchain ecosystems. My academic journey began at Cornell University, where I earned a BA in Performance-Media Arts with minors in Anthropology and Comparative Literature as a Mellon Mays Undergraduate Fellow.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="inner">
+                    <h2 class="centered-header">CURRENT WORK</h2>
+                    <div class="section-blocks">
+                        <div>
+                            <div class="toggle-header" onclick="toggleContent('daos')">
+                                INNOVATIVE METRICS FOR DAOS
+                            </div>
+                            <div id="daos" class="toggle-content">
+                                My current research investigates the socio-technical dynamics of decentralized governance, particularly in Decentralized Autonomous Organizations (DAOs), with the aim of designing innovative metrics that better capture political decentralization. Utilizing Natural Language Processing, Network Analysis, and agent-based modeling, I analyze participation and representation dynamics to inform more equitable governance systems.
+                            </div>
+                        </div>
+                        <div>
+                            <div class="toggle-header" onclick="toggleContent('disagreement')">
+                                LEVERAGING DISAGREEMENT
+                            </div>
+                            <div id="disagreement" class="toggle-content">
+                                I am also developing tools that treat political antagonism as a valuable asset in decision-making, contributing to frameworks that foster efficient collective intelligence and innovation in digital governance. These efforts align with my broader commitment to advancing sustainable, accountable, and participatory governance models, both online and offline.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             </div>
 
         </div>
@@ -160,19 +172,10 @@
     </div>
 
     <script>
-        // Set active menu item based on current page
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        const menuLinks = document.querySelectorAll('#header nav a');
-        menuLinks.forEach(link => {
-            link.classList.remove('active');
-            if ((currentPage === 'index.html' || currentPage === 'bio.html') && link.textContent === 'About') {
-                link.classList.add('active');
-            } else if (currentPage === 'publications.html' && link.textContent === 'Publications') {
-                link.classList.add('active');
-            } else if (currentPage === 'tools.html' && link.textContent === 'Stuff') {
-                link.classList.add('active');
-            }
-        });
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.classList.toggle('active');
+        }
 
         function checkVerification() {
             const nameInput = document.getElementById('full-name').value.trim();
@@ -215,6 +218,20 @@
             pdfOverlay.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
+
+        // Set active menu item based on current page
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const menuLinks = document.querySelectorAll('#header nav a');
+        menuLinks.forEach(link => {
+            link.classList.remove('active');
+            if (currentPage === 'index.html' && link.textContent === 'About') {
+                link.classList.add('active');
+            } else if (currentPage === 'publications.html' && link.textContent === 'Publications') {
+                link.classList.add('active');
+            } else if (currentPage === 'tools.html' && link.textContent === 'Stuff') {
+                link.classList.add('active');
+            }
+        });
 
         window.addEventListener('load', function() {
             document.body.classList.remove('is-preload');
