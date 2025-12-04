@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA Data Justice Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="widget-container" id="widgetContainer">
+        <!-- Welcome Landing Overlay -->
+        <div class="landing-overlay" id="landingOverlay">
+            <div class="ucla-logo-landing">UCLA</div>
+            <h1 class="landing-title">LA Data Justice Hub</h1>
+            <div class="landing-arrow">↓</div>
+        </div>
+        
+        <!-- Header Bar -->
+        <header class="widget-header">
+            <div class="header-left">
+                <div class="ucla-logo-placeholder">UCLA</div>
+                <span class="header-title">LA DATA JUSTICE HUB</span>
+            </div>
+            <button class="maximize-btn" id="maximizeBtn" aria-label="Toggle fullscreen">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                </svg>
+            </button>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="widget-body">
+            <!-- Left Column: Table of Contents -->
+            <aside class="toc-panel" id="tocPanel">
+                <button class="toc-toggle" id="tocToggle" aria-label="Toggle table of contents">
+                    <span class="toc-icon">☰</span>
+                </button>
+                <nav class="toc-content" id="tocContent">
+                    <ul class="toc-list">
+                        <li class="toc-item">
+                            <a href="#about" class="toc-link" data-section="about">About():</a>
+                            <ul class="toc-sublist">
+                                <li><a href="#what-is-hub" class="toc-sublink" data-section="what-is-hub">The LA Data Justice Hub</a></li>
+                                <li><a href="#who-are-authors" class="toc-sublink" data-section="who-are-authors">It's People</a></li>
+                            </ul>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#learn-data-justice" class="toc-link" data-section="learn-data-justice">Learn_Data_Justice():</a>
+                            <ul class="toc-sublist">
+                                <li><a href="#critical-data-studies" class="toc-sublink" data-section="critical-data-studies">Sites to Learn About Critical Data Studies and Data Justice Initiatives</a></li>
+                                <li><a href="#featured-examples" class="toc-sublink" data-section="featured-examples">Featured Examples of Data for Justice</a></li>
+                                <li><a href="#recommended-readings" class="toc-sublink" data-section="recommended-readings">Recommended Readings</a></li>
+                            </ul>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#get-data" class="toc-link" data-section="get-data">Get_Data():</a>
+                            <ul class="toc-sublist">
+                                <li><a href="#note-on-open-data" class="toc-sublink" data-section="note-on-open-data">A Note on Open Data</a></li>
+                                <li><a href="#directory-of-open-data-sources" class="toc-sublink" data-section="directory-of-open-data-sources">Directory of Open Data Sources</a></li>
+                            </ul>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#learn-to-use-data" class="toc-link" data-section="learn-to-use-data">Use_Data():</a>
+                            <ul class="toc-sublist">
+                                <li><a href="#online-tutorials" class="toc-sublink" data-section="online-tutorials">Online Tutorials</a></li>
+                                <li><a href="#data-analysis-walkthroughs" class="toc-sublink" data-section="data-analysis-walkthroughs">Data Analysis Walkthroughs</a></li>
+                            </ul>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#gallery" class="toc-link" data-section="gallery">Gallery of Student Projects</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#feedback" class="toc-link" data-section="feedback">Feedback for the Hub</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Right Column: Main Content -->
+            <main class="content-area" id="contentArea">
+                <!-- About Section -->
+                <section id="about" class="content-section">
+                    <h1 class="section-title">About():</h1>
+                    
+                    <div id="what-is-hub" class="subsection">
+                        <h2 class="subsection-title">What is the LA Data Justice Hub?</h2>
+                        
+                        <p class="placeholder-text">
+                            The Data Justice Hub is an initiative that empowers students, community organizations, and faculty to access and use data to rectify harm. We hope this digital tool will help train the next generation of social justice and data change agents. With an estimated population of approximately 10 million people, Los Angeles County is the most populous in the United States and, thus, consequential for our understanding of the world at large. This online data directory provides easy access to open-source datasets containing valuable information about the Los Angeles region. Assembled under different tabs are links to datasets, trainings, and analysis relevant to studying the greater Los Angeles region. Specifically, the datasets have been curated in relation to a range of social justice issues: policing, incarceration, economics, education, climate change, food insecurity, gender, racialization, houselessness, political disenfranchisement, migration, public health, and state violence.
+                        </p>
+                        
+                        <p class="placeholder-text">
+                            This site has been developed through the Mellon Social Justice Curricular Initiatives at UCLA. The new "Data, Justice, and Society" curricular initiatives aim is to create a "data-driven approach to teaching and research on social justice issues, positioning more UCLA graduates to become social change leaders in their chosen professions."
+                        </p>
+                        
+                        <h3 class="content-heading">What is Data Justice?</h3>
+                        <p class="placeholder-text">
+                            Data-based computation (i.e. algorithms, Artificial Intelligence, predictive modeling) increasingly play a dominant role in shaping our everyday experiences of culture, work, and society. Data and data analytics impact everything from social relations and public policy to juridical status, governance, and market logistics. Yet, exactly how does the rise of technological corporate wealth compare with the standard of living of Los Angeles's "working poor"?
+                        </p>
+                        
+                        <p class="placeholder-text">
+                            Since data-based claims are embedded in complex power relations, the mission of this website is to encourage "data justice" methods and analysis that challenges the injustices confronting the diverse communities of the greater Los Angeles region. Data Justice is a technique and ethos emerging from the new field of Critical Data Studies (CDS) that asks questions such as the above. A "data justice" critical view recognizes the link between the increasing datafication of society and social inequality. On the one hand, a data justice approach places a critical lens on the way "Big Tech" deploys data-driven algorithms to cause harm. On the other hand, data justice researchers and practitioners mobilize analysis of open-source datasets as well as findings from other data sources to redress these harms. Data justice aspires to enact change precisely through more ethical and just application of data.
+                        </p>
+                        
+                        <p class="placeholder-text">
+                            We hope this site will provide you with resources to enact data justice vis a vis the social issues of most concern to the most vulnerable communities in Los Angeles.
+                        </p>
+                        
+                        <h3 class="content-heading">How Can I Use This Site?</h3>
+                        <p class="placeholder-text">
+                            This site is meant as an instructional tool to empower members of the UCLA community and public with easier access to datasets relevant to research on selected social justice issues. To find such datasets, we recommend opening the "Data and Dashboards" tab and opening the link to the social justice issue of your choice. The list of sites that you will find contain repositories of vast amounts of data that you can analyze to better understand some of the largest issues facing the Los Angeles communities today.
+                        </p>
+                        
+                        <p class="placeholder-text">
+                            For introductions on how to work with some of the largest open-source databases, such as the U.S. Census and Bureau of Labor Statistics, we recommend reviewing "Data Training and Education." To learn more about the emerging field of Critical Data Studies, please consult the tab "Recommended Readings and Resources."
+                        </p>
+                        
+                        <p class="placeholder-text">
+                            We look forward to soon featuring the exciting "Data Justice" scholarship taking place at UCLA by faculty and students. Stay tuned!
+                        </p>
+                    </div>
+
+                    <div id="who-are-authors" class="subsection">
+                        <h2 class="subsection-title">It's People</h2>
+                        
+                        <h3 class="content-heading">Authors:</h3>
+                        
+                        <h4 class="author-name">Dr. Munia Bhaumik</h4>
+                        <p class="author-title">Principal Investigator and Founder</p>
+                        <p class="placeholder-text">
+                            Dr. Munia Bhaumik is the Program Director of Mellon Social Justice Curricular Initiatives and an award-winning scholar in comparative literature, politics, and law. She is an alumna of UCLA, where she earned an M.A. in Urban Planning. Her research and teaching focus on critiquing racial and gender inequities, as well as examining the various social factors that determine whose lives are valued before the law.
+                        </p>
+                        <p class="placeholder-text">
+                            Dr. Bhaumik's academic work reimagines citizenship and democracy, particularly through the lens of vulnerability, exploring how marginalized groups such as noncitizen refugees, migrant workers, incarcerated individuals, and undocumented detainees play a crucial role in social systems.
+                        </p>
+                        <p class="placeholder-text">
+                            She holds a PhD in Comparative Literature from the University of California, Berkeley, and has taught at Emory University in Atlanta. There, she worked to strengthen alliances between new Asian/Latinx immigrant communities and African American voting rights organizations in the South, while also developing an undergraduate program in comparative literature and critical theory.
+                        </p>
+                        <p class="placeholder-text">
+                            Dr. Bhaumik has received prestigious awards, including the Stanford Humanities Center, the Herman Melville Society, and the Cornell Society for the Humanities faculty awards. Her book, In Liberty's Shadow: The Noncitizen in American Letters and Law, analyzes key literary and philosophical texts shaping American political culture before 1900, advocating for a democratic ethos of recognition for the noncitizen.
+                        </p>
+                        <p class="placeholder-text">
+                            With a background as a Spanish-speaking labor and community organizer in Los Angeles, Dr. Bhaumik shaped national debates on social justice through direct action. Motivated by the intersection of the humanities and social movements, her work engages with abolition, noncitizen citizenship, and the fight for equal rights among marginalized communities.
+                        </p>
+                        
+                        <h4 class="author-name">Christian Nielsen Garcia</h4>
+                        <p class="author-title">PhD Student, Department of Information Studies</p>
+                        <p class="placeholder-text">
+                            Christian Nielsen Garcia's current research investigates the socio-technical dynamics of decentralized governance, with a particular focus on Decentralized Autonomous Organizations (DAOs). His work aims to develop innovative metrics that more accurately capture political decentralization. By utilizing Natural Language Processing, Network Analysis, and agent-based modeling, Garcia examines participation and representation dynamics to inform the creation of more equitable governance systems. He is a recipient of the Mellon GSE Grant, the Social Science Research Council (SSRC) Award, and the Berkeley Center for Responsible Decentralized Intelligence Award.
+                        </p>
+                        <p class="placeholder-text">
+                            In addition, Garcia is working on the development of tools that treat political antagonism as a valuable asset in decision-making processes, contributing to frameworks that enhance collective intelligence and foster innovation in digital governance. These efforts reflect Garcia's broader commitment to advancing sustainable, accountable, and participatory governance models, both online and offline.
+                        </p>
+                        
+                        <h3 class="content-heading">Past Contributors and Co-authors</h3>
+                        
+                        <h4 class="author-name">Sydney Saubestre</h4>
+                        <p class="author-title">Masters in Public Policy Candidate</p>
+                        
+                        <h4 class="author-name">Rafik Wahbi</h4>
+                        <p class="author-title">PhD Candidate in Public Health</p>
+                        
+                        <h3 class="content-heading">Contributors:</h3>
+                        <p class="placeholder-text">
+                            The LA Data Justice Hub is sustained by the collaborative efforts of UCLA students, researchers, faculty, and administration who provide ongoing feedback and input. The Center for Community Engagement, where this hub is hosted, plays a crucial role in supporting and maintaining this initiative. We are also grateful to the members of Los Angeles's vibrant community who contribute their insights and expertise.
+                        </p>
+                        <p class="placeholder-text">
+                            Of special mention are the various students whose projects we feature in the Gallery of Student Projects, often drawn from the UCLA Digital Humanities course Race, Gender, and Data. Their innovative work demonstrates the power of data justice in action and inspires future generations of data change agents.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Learn Data Justice Section -->
+                <section id="learn-data-justice" class="content-section">
+                    <h1 class="section-title">Learn_Data_Justice():</h1>
+                    
+                    <div id="critical-data-studies" class="subsection">
+                        <h2 class="subsection-title">Interactive Sites for Further Learning about Critical Data Studies and Data Justice Initiatives</h2>
+                        
+                        <div class="resource-list">
+                            <div class="resource-item">
+                                <h3 class="resource-name">
+                                    <a href="https://www.ajlunited.org/" target="_blank" rel="noopener noreferrer">Algorithmic Justice League</a>
+                                </h3>
+                                <p class="resource-description">
+                                    Aims to highlight algorithmic bias through media, art, and science; provide space for people to voice concerns and experiences with coded bias; develop practices for accountability during the design, development, and deployment of coded systems.
+                                </p>
+                            </div>
+                            
+                            <div class="resource-item">
+                                <h3 class="resource-name">
+                                    <a href="https://centerformediajustice.org/" target="_blank" rel="noopener noreferrer">Center for Media Justice</a>
+                                </h3>
+                                <p class="resource-description">
+                                    Aims to build a powerful movement for a more just and participatory media and digital world—with racial equity and human rights for all.
+                                </p>
+                            </div>
+                            
+                            <div class="resource-item">
+                                <h3 class="resource-name">
+                                    <a href="https://chupadados.codingrights.org/es/introducao/" target="_blank" rel="noopener noreferrer">Chupadatos</a>
+                                </h3>
+                                <p class="resource-description">
+                                    Project gathers stories from across Latin America about the mass collection and processing of data that governments, businesses and individuals carry out to monitor "cities, homes, wallets and bodies."
+                                </p>
+                            </div>
+                            
+                            <div class="resource-item">
+                                <h3 class="resource-name">
+                                    <a href="http://d4bl.org/about.html" target="_blank" rel="noopener noreferrer">Data 4 Black Lives</a>
+                                </h3>
+                                <p class="resource-description">
+                                    A group of various multidisciplinary organizers who aim to use data to "create concrete and measurable change in the lives of black people." By convening an annual conference, the group speaks to data scientists, policy makers, researchers, students, parents and more to "chart out a new future for data science."
+                                </p>
+                            </div>
+                            
+                            <div class="resource-item">
+                                <h3 class="resource-name">
+                                    <a href="https://sites.google.com/g.ucla.edu/datax-salon-series-fall/home" target="_blank" rel="noopener noreferrer">DATAX</a>
+                                </h3>
+                                <p class="resource-description">
+                                    UCLA series that organizes weekly conversations with a diverse group of science and humanities scholars about social, gendered, and racial justice in data science.
+                                </p>
+                            </div>
+                            
+                            <div class="resource-item">
+                                <h3 class="resource-name">
+                                    <a href="https://www.alliedmedia.org/news/2017/01/13/guidelines-equitable-open-data" target="_blank" rel="noopener noreferrer">Equitable Open Data</a>
+                                </h3>
+                                <p class="resource-description">
+                                    A set of guidelines for advancing "equitable practices for collecting, disseminating and using open data."
+                                </p>
+                            </div>
+                            
+                            <div class="resource-item">
+                                <h3 class="resource-name">
+                                    <a href="https://www.gida-global.org/" target="_blank" rel="noopener noreferrer">Global Indigenous Data Alliance</a>
+                                </h3>
+                                <p class="resource-description">
+                                    Site promoting and asserting indigenous control of indigenous data.
+                                </p>
+                            </div>
+                            
+                            <div class="resource-item">
+                                <h3 class="resource-name">
+                                    <a href="https://www.c2i2.ucla.edu/" target="_blank" rel="noopener noreferrer">UCLA Center for Critical Internet Inquiry</a>
+                                </h3>
+                                <p class="resource-description">
+                                    A critical internet studies community committed to strengthening human rights, championing social justice, and reimagining technology through research, culture, and public policy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="featured-examples" class="subsection">
+                        <h2 class="subsection-title">Featured Examples of Data for Justice</h2>
+                        <p class="placeholder-text">
+                            This section will feature some examples of how data is being used for social justice and transformation. This is not an exhaustive list, and some examples that might be helpful for envisioning what a data for justice project might look like. We hope this section will encourage others to dream up and create new "Data for Justice" projects.
+                        </p>
+                        
+                        <div class="accordion-container">
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Youth/Community Action Participatory Research for Justice</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="https://www.esri.com/about/newsroom/blog/los-angeles-shade-equity/" target="_blank" rel="noopener noreferrer">Student-Led Mapping Locates Areas in Los Angeles in Need of Shade Equity</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.org/stories/project-resolve/" target="_blank" rel="noopener noreferrer">Project Resolve and the Healthy Community Hub</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.justiceadda.com/post/a-community-hub-to-build-share-and-use-data-on-law-and-justice" target="_blank" rel="noopener noreferrer">A Community Hub to Build, Share and Use Data on Law and Justice in India</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://antievictionmap.com/" target="_blank" rel="noopener noreferrer">Anti-Eviction Mapping Project</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                            
+                            <details class="accordion-item" open>
+                                <summary class="accordion-header">Interactive Data Hubs/Dashboards</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="https://aisp.upenn.edu/wp-content/uploads/2020/08/AISP-Toolkit_5.27.20.pdf" target="_blank" rel="noopener noreferrer">Center Racial Equity Through Data Integration</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.coalitioncommunitiescolor.org/ccc-researchdatajustice" target="_blank" rel="noopener noreferrer">Coalition of Communities of Color Research & Data Justice</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.datacenter.org/services-offered/community-driven-research-resources/" target="_blank" rel="noopener noreferrer">Community Driven Research Resources</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://detroitcommunitytech.org/eii" target="_blank" rel="noopener noreferrer">Equitable Internet Initiative (Detroit)</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.thejustdatalab.com/" target="_blank" rel="noopener noreferrer">Ida B. Wells Just Data Site</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://milliondollarhoods.pre.ss.ucla.edu/" target="_blank" rel="noopener noreferrer">Million Dollar Hoods Project</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://nationalequityatlas.org/" target="_blank" rel="noopener noreferrer">National Equity Atlas</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.openenvironmentaldata.org/" target="_blank" rel="noopener noreferrer">Open Environmental Data Project</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.tableau.com/foundation/data-equity" target="_blank" rel="noopener noreferrer">Racial Equity Data Hub</a>, <a href="https://www.tableau.com/about/blog/2022/6/how-data-equity-hub-helps-organizations-use-data-fight-justice-and-equity" target="_blank" rel="noopener noreferrer">Racial Equity Data Hub Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://texasafterviolence.org/" target="_blank" rel="noopener noreferrer">Texas After Violence Project</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </div>
+                        
+                        <p class="placeholder-text" style="margin-top: 30px; font-style: italic; color: rgba(255, 255, 255, 0.7);">
+                            *This is a non-exhaustive list of some topics where data can inform social justice work. We hope to add a submission tab in the near future.
+                        </p>
+                    </div>
+
+                    <div id="recommended-readings" class="subsection">
+                        <h2 class="subsection-title">Recommended Readings</h2>
+                        <p class="placeholder-text">
+                            As well as the open-source examples under the Featured Examples tab, the following resources and readings are highly recommended for anyone who is interested in better understanding how data can be misused, and just as importantly, the role it can play in empowering communities.
+                        </p>
+                        
+                        <div class="reading-gallery-container">
+                            <div class="reading-gallery">
+                                <div class="reading-item">
+                                    <a href="https://mitpress.mit.edu/9780262529914/big-data-little-data-no-data/" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://mit-press-new-us.imgix.net/covers/9780262529914.jpg?auto=format&w=298&dpr=1&q=80" alt="Cover image for Big Data, Little Data, No Data: Scholarship in the Networked World by Christine L. Borgman" title="Big Data, Little Data, No Data: Scholarship in the Networked World by Christine L. Borgman">
+                                    </a>
+                                </div>
+                                <div class="reading-item">
+                                    <a href="https://www.publicaffairsbooks.com/titles/shoshana-zuboff/the-age-of-surveillance-capitalism/9781610395694/" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://communityengagement.ucla.edu/wp-content/uploads/2023/03/26195941-664x1030.jpg" alt="Cover image for The Age of Surveillance Capitalism by Shoshana Zuboff" title="The Age of Surveillance Capitalism by Shoshana Zuboff">
+                                    </a>
+                                </div>
+                                <div class="reading-item">
+                                    <a href="https://www.apc.org/en/pubs/feminist-principles-internet-version-20" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://communityengagement.ucla.edu/wp-content/uploads/2023/03/FPIs.jpg" alt="Illustration of feminist logo" title="Principles of a Feminist Internet statement by the Association of Progressive Communications">
+                                    </a>
+                                </div>
+                                <div class="reading-item">
+                                    <a href="https://data-feminism.mitpress.mit.edu/" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://communityengagement.ucla.edu/wp-content/uploads/2023/03/01582679454490.jpg" alt="Cover image for Data Feminism by Catherine d'Ignazio and Laura Klein" title="Data Feminism by Catherine d'Ignazio and Laura Klein">
+                                    </a>
+                                </div>
+                                <div class="reading-item">
+                                    <a href="https://mitpress.mit.edu/9780262545310/data-action/" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://communityengagement.ucla.edu/wp-content/uploads/2023/03/collidbooks_covers_0isbn9780262044196type-1.jpg" alt="Cover for Data Action by Sarah Williams" title="Data Action by Sarah Williams">
+                                    </a>
+                                </div>
+                                <div class="reading-item">
+                                    <a href="https://nyupress.org/9781479837243/algorithms-of-oppression/" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://communityengagement.ucla.edu/wp-content/uploads/2023/03/816UBqZbbVL._AC_UF10001000_QL80_.jpg" alt="Cover for Algorithms of Oppression by Safiya Noble" title="Algorithms of Oppression by Safiya Noble">
+                                    </a>
+                                </div>
+                                <div class="reading-item">
+                                    <a href="https://www.scientificamerican.com/article/the-harm-that-data-do/" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://communityengagement.ucla.edu/wp-content/uploads/2023/03/1E990E9B-9A87-451D-B8C404A0F042AC09_source.png" alt="Illustration of a caged red bird. The cage resembles data." title="The Harm that Data Do by Joanna Redden">
+                                    </a>
+                                </div>
+                                <div class="reading-item">
+                                    <a href="https://www.penguinrandomhouse.com/books/671896/the-verifiers-by-jane-pek/" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://communityengagement.ucla.edu/wp-content/uploads/2023/03/91aHxzP0tkL._AC_UF10001000_QL80_.jpg" alt="Cover image for The Verifiers by Jane Pek" title="The Verifiers by Jane Pek">
+                                    </a>
+                                </div>
+                                <div class="reading-item">
+                                    <a href="https://www.pentagram.com/work/what-counts" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://communityengagement.ucla.edu/wp-content/uploads/2023/03/gl_mcny_00-1030x642.jpg" alt="Photo of a portion of the interactive art installation What Counts by Giorgia Lupi" title="What Counts by Giorgia Lupi">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Get Data Section -->
+                <section id="get-data" class="content-section">
+                    <h1 class="section-title">Get_Data():</h1>
+                    
+                    <div id="note-on-open-data" class="subsection">
+                        <h2 class="subsection-title">A Note on Open Data</h2>
+                        <p class="placeholder-text">
+                            This section brings together trusted sources of open data. Before exploring them, it is useful to understand what open data is and why it matters. Open data refers to information that anyone can access, use, and share with minimal restrictions. It lowers barriers so communities, researchers, and institutions can study problems, build tools, and develop insights that support justice and accountability.
+                        </p>
+                        <p class="placeholder-text">
+                            Several frameworks guide how people and organizations release data to the public. They emphasize accessibility, transparency, interoperability, and equity so that open data can meaningfully serve its users.
+                        </p>
+                        <p class="placeholder-text">
+                            As Christine Borgman explains, however, making data open does not automatically make it reusable. Her work highlights a number of practices that influence whether data can actually be understood and applied by others, including ideas such as Context is Crucial, Knowledge Exchange vs. Transaction, Infrastructure Involves People, Not Just Technology, Incentives Matter, Purpose Driven Strategies, Recognize the Distances, and Support for Reproducibility. These concepts point to the social, technical, and institutional conditions needed for genuine reuse.
+                        </p>
+                        <p class="placeholder-text">
+                            For a deeper discussion of these practices and why they matter, see Christine L. Borgman's <a href="https://mitpress.mit.edu/9780262529914/big-data-little-data-no-data/" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">Big Data, Little Data, No Data: Scholarship in the Networked World (2015)</a>, listed in the Recommended Readings section.
+                        </p>
+                        
+                        <div class="accordion-container" style="margin-top: 25px;">
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Frameworks for Open Data</summary>
+                                <div class="accordion-content">
+                                    <div class="resource-list">
+                                        <div class="resource-item">
+                                            <h3 class="resource-name">
+                                                <a href="https://www.go-fair.org/fair-principles/" target="_blank" rel="noopener noreferrer">FAIR Principles</a>
+                                            </h3>
+                                            <p class="resource-description">
+                                                <strong>Acronym:</strong> FAIR (Findable, Accessible, Interoperable, Reusable)
+                                            </p>
+                                        </div>
+                                        
+                                        <div class="resource-item">
+                                            <h3 class="resource-name">
+                                                <a href="https://www.gida-global.org/care" target="_blank" rel="noopener noreferrer">CARE Principles for Indigenous Data Governance</a>
+                                            </h3>
+                                            <p class="resource-description">
+                                                <strong>Acronym:</strong> CARE (Collective Benefit, Authority to Control, Responsibility, Ethics)
+                                            </p>
+                                        </div>
+                                        
+                                        <div class="resource-item">
+                                            <h3 class="resource-name">
+                                                <a href="https://opendatacharter.net/principles/" target="_blank" rel="noopener noreferrer">Open Data Charter Principles</a>
+                                            </h3>
+                                            <p class="resource-description">
+                                                <strong>Acronym:</strong> ODC (Open Data Charter)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <h4 style="color: var(--ucla-blue); font-size: 16px; font-weight: 600; margin-top: 25px; margin-bottom: 15px;">Other Important Frameworks and Principles:</h4>
+                                    <ul class="resource-link-list" style="margin-top: 10px;">
+                                        <li>Linked Open Data (LOD) Principles</li>
+                                        <li>First Nations OCAP® Principles</li>
+                                        <li>Data Commons / Data Commons Governance Principles</li>
+                                        <li>Data Management Life-Cycle Principles</li>
+                                        <li>Open Knowledge Definition (OKD)</li>
+                                        <li>Open Science / Open Access Principles</li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    
+                    <div id="directory-of-open-data-sources" class="subsection">
+                        <h2 class="subsection-title">Directory of Open Data Sources</h2>
+                        <p class="user-note">
+                            Please note that Los Angeles City data is distinct from Los Angeles County data, as well as state and national data. All of these distinct data hubs each contain valuable data about Los Angeles, although covering different geographic scopes. The best way to identify which data you need is to explore the individual links. In several of the sites below, you will also be able to locate data by inputting a specific Zip Code. This technique will enable you to find data about a particular neighborhood.
+                        </p>
+                        
+                        <div class="accordion-container" style="margin-top: 30px;">
+                            <!-- Los Angeles Regional Data -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Los Angeles Regional Data</summary>
+                                <div class="accordion-content">
+                                    <h4 style="color: var(--ucla-blue); font-size: 16px; font-weight: 600; margin-top: 0; margin-bottom: 15px;">Los Angeles</h4>
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="https://data.lacity.org/" target="_blank" rel="noopener noreferrer">DataLA (City)</a>: General data maintained by and related to the city of Los Angeles.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://data.lacity.org/browse" target="_blank" rel="noopener noreferrer">data repo</a> (containing: repository: datasets, search engine).</li>
+                                                <li>Navigate to their <a href="https://medium.com/datala" target="_blank" rel="noopener noreferrer">publications</a> (containing: blog, data analytical pieces).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.lacounty.gov/" target="_blank" rel="noopener noreferrer">DataLA (County)</a>: General data maintained by and related to the county of Los Angeles.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://data.lacounty.gov/search" target="_blank" rel="noopener noreferrer">data repo</a> (containing: repository: datasets, search engine).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://geohub.lacity.org/" target="_blank" rel="noopener noreferrer">LA Geo Hub</a>: Data on location-based open data maintained by the city of Los Angeles.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://geohub.lacity.org/datasets" target="_blank" rel="noopener noreferrer">data repo</a> (containing: repository: datasets, search engine).</li>
+                                                <li>Navigate to their <a href="https://medium.com/datala" target="_blank" rel="noopener noreferrer">publications</a> (containing: blog, data analytical pieces).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://egis-lacounty.hub.arcgis.com/" target="_blank" rel="noopener noreferrer">LA County EGIS</a>: Geo Data for LA County.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://data.lacounty.gov/search" target="_blank" rel="noopener noreferrer">data repo</a> (containing: repository: datasets, search engine).</li>
+                                                <li>Navigate to their <a href="https://gioblog-lacounty.hub.arcgis.com/" target="_blank" rel="noopener noreferrer">publications</a> (containing: blog, news & events).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="http://publichealth.lacounty.gov/media/coronavirus/data/" target="_blank" rel="noopener noreferrer">LA County Daily COVID-19 Data</a>: LA County's daily Covid-19 rate tracker and <a href="https://covid19.lacounty.gov/dashboards/" target="_blank" rel="noopener noreferrer">maps</a>.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="http://publichealth.lacounty.gov/media/coronavirus/data/index.htm" target="_blank" rel="noopener noreferrer">data dashboard</a> (containing: data dashboard, data visualizations).</li>
+                                                <li>Navigate to their <a href="http://publichealth.lacounty.gov/media/coronavirus/vaccine/vaccine-dashboard.htm" target="_blank" rel="noopener noreferrer">data dashboard</a> (containing: data dashboard, repository: datasets, data visualizations).</li>
+                                                <li>Navigate to their <a href="http://dashboard.publichealth.lacounty.gov/covid19_surveillance_dashboard/" target="_blank" rel="noopener noreferrer">data dashboard</a> (containing: data dashboard, repository: datasets, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://covid19.lacounty.gov/dashboards/" target="_blank" rel="noopener noreferrer">GIS</a> (containing: interactive maps, GIS).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="http://publichealth.lacounty.gov/acd/respwatch/index.htm" target="_blank" rel="noopener noreferrer">RESP WATCH</a>
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="http://publichealth.lacounty.gov/acd/respwatch/index.htm" target="_blank" rel="noopener noreferrer">data dashboard</a> (containing: data dashboard, data visualizations).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://lawicdata.org/" target="_blank" rel="noopener noreferrer">LA County WIC Data</a>: LA County information on WIC (Special Supplemental Nutrition Program for Women, Infants, and Children).
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://lawicdata.org/data-research/topics/" target="_blank" rel="noopener noreferrer">data dashboard</a> (containing: data dashboard, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://lawicdata.org/data-research/by-region/" target="_blank" rel="noopener noreferrer">data dashboard</a> (containing: data dashboard, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://lawicdata.org/news/" target="_blank" rel="noopener noreferrer">publications</a> (containing: blog, news & Events, data analytical pieces).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.lewis.ucla.edu/programs/data/" target="_blank" rel="noopener noreferrer">Lewis Center for Regional Policy Studies</a>: Research Institute at UCLA that publishes the <a href="https://ucla.app.box.com/s/5pzrmbte70br511acn1verx1iv5k2xj3" target="_blank" rel="noopener noreferrer">LA Quality of Life Index</a>.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.lewis.ucla.edu/programs/data/los-angeles-commercial-sidewalks-al-fresco/" target="_blank" rel="noopener noreferrer">GIS</a> (containing: interactive maps, GIS).</li>
+                                                <li>Navigate to their <a href="https://www.urbandisplacement.org/map/socal" target="_blank" rel="noopener noreferrer">GIS</a> (containing: interactive maps, GIS).</li>
+                                                <li>Navigate to their <a href="http://revision.lewis.ucla.edu/index.html" target="_blank" rel="noopener noreferrer">GIS</a> (containing: interactive maps, GIS).</li>
+                                                <li>Navigate to their <a href="https://www.lewis.ucla.edu/qualityoflife/" target="_blank" rel="noopener noreferrer">data repo</a> (containing: repository: datasets).</li>
+                                                <li>Navigate to their <a href="https://www.lewis.ucla.edu/southern-california-data-resources/" target="_blank" rel="noopener noreferrer">data directory</a> (containing: Data Resources Directory).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://sdgdata.lamayor.org/" target="_blank" rel="noopener noreferrer">Los Angeles Sustainable Development Goals</a>: Tracks Los Angeles' efforts and outcomes related to the Sustainable Development Goals (SDG) set by Mayor Garcetti. Open-source data sets related to sustainable cities, reducing inequalities, gender equality, unhoused rights, etc.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://sdgdata.lamayor.org/" target="_blank" rel="noopener noreferrer">data repo</a> (containing: repository: datasets, search engine).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://la.myneighborhooddata.org/" target="_blank" rel="noopener noreferrer">USC Neighborhood Data for Social Change</a>: Maps and data set of various indicators in LA neighborhoods.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://la.myneighborhooddata.org/data/" target="_blank" rel="noopener noreferrer">data repo</a> (containing: repository: datasets).</li>
+                                                <li>Navigate to their <a href="https://map.myneighborhooddata.org/" target="_blank" rel="noopener noreferrer">GIS</a> (containing: interactive maps, GIS).</li>
+                                                <li>Navigate to their <a href="https://la.myneighborhooddata.org/reports/" target="_blank" rel="noopener noreferrer">publications</a> (containing: data analytical pieces).</li>
+                                                <li>Navigate to their <a href="https://la.myneighborhooddata.org/stories/" target="_blank" rel="noopener noreferrer">publications</a> (containing: blog, data analytical pieces).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    
+                                    <hr style="border: none; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 25px 0;">
+                                    
+                                    <h4 style="color: var(--ucla-blue); font-size: 16px; font-weight: 600; margin-top: 20px; margin-bottom: 15px;">California</h4>
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="https://data.ca.gov/" target="_blank" rel="noopener noreferrer">California Open Data</a>: State of California Open-Data portal with wide-range of datasets, including datasets on Covid-19 vaccine progress, environmental indicators such as bacteria in waste-water, and homeless reports.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://data.ca.gov/dataset" target="_blank" rel="noopener noreferrer">data repo</a> (containing: repository: datasets, search engine).</li>
+                                                <li>Navigate to their <a href="https://gis.data.ca.gov/search" target="_blank" rel="noopener noreferrer">data repo</a> (containing: repository: datasets, GIS).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    
+                                    <hr style="border: none; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 25px 0;">
+                                    
+                                    <h4 style="color: var(--ucla-blue); font-size: 16px; font-weight: 600; margin-top: 20px; margin-bottom: 15px;">National</h4>
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="https://cap.engagementnetwork.org/" target="_blank" rel="noopener noreferrer">Community Action Partnerships Data Hub</a>: maps and indicators related to community needs across the US, including demographic, educational, housing, and poverty indicators.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://cap.engagementnetwork.org/map-my-community/cap-map-room/" target="_blank" rel="noopener noreferrer">GIS</a> (containing: interactive maps, GIS).</li>
+                                                <li>Navigate to their <a href="https://cap.engagementnetwork.org/assessment-tools/" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (containing: Generate Visualizations and Data Reports).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.gov/about/" target="_blank" rel="noopener noreferrer">Data.gov</a>: Site maintained by the U.S. General Services Administration that collects datasets on everything from the demographic numbers related to Alzheimer's to the number of Black Owned Businesses in Los Angeles. Easy search function, and can further find specific information by using filters.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://catalog.data.gov/dataset" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets, search engine).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.census.gov/cedsci/" target="_blank" rel="noopener noreferrer">U.S. Census.Gov</a>: Every ten years, the federal government oversees a national census that counts how many people are in each census tract and collects additional socioeconomic and demographic data. They also have <a href="https://www.census.gov/data/academy/courses.html" target="_blank" rel="noopener noreferrer">courses</a> on how to navigate the site.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://data.census.gov/table" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets, search engine).</li>
+                                                <li>Navigate to their <a href="https://data.census.gov/map" target="_blank" rel="noopener noreferrer">GIS</a> (Includes interactive maps, GIS).</li>
+                                                <li>Navigate to their public <a href="https://api.census.gov/data/2022/acs/acs5/groups/.html" target="_blank" rel="noopener noreferrer">Data Tables</a>.</li>
+                                                <li>Navigate to their <a href="https://data.census.gov/mdat" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes customizable dataset builder).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                            
+                            <!-- Criminalization, Incarceration, and Carceral Systems -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Criminalization, Incarceration, and Carceral Systems</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="https://bjs.ojp.gov/" target="_blank" rel="noopener noreferrer">U.S. Bureau of Justice Statistics</a>: The federal Bureau of Justice Statistics includes summary data tables of crime statistics in the US, as well as a variety of analytical tools.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.icpsr.umich.edu/web/NACJD/search/studies?q=&FUNDINGAGENCY_FACET=United%20States%20Department%20of%20Justice.%20Office%20of%20Justice%20Programs.%20Bureau%20of%20Justice%20Statistics" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets, search engine).</li>
+                                                <li>Navigate to their <a href="https://fccps.bjs.ojp.gov/" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                                <li>Navigate to their <a href="https://bjs.ojp.gov/library/publications/list" target="_blank" rel="noopener noreferrer">publications</a> (Includes Publications, Search Engine).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://projects.scpr.org/officer-involved/" target="_blank" rel="noopener noreferrer">KPCC Officer Involved Shooting</a>: A KPCC investigation into officer involved shootings in the Los Angeles area. Fatal Encounters: Fatal Encounters is a partial database of fatal police encounters, leading to the creation of the National Officer-Involved Homicide Database with a team at USC.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://projects.scpr.org/officer-involved/explore/" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data dashboard, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://github.com/SCPR/kpcc-data-team/tree/master/data/kpcc-officer-involved#what-is-here" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets).</li>
+                                                <li>Navigate to their <a href="https://projects.scpr.org/officer-involved/explore/documents.html" target="_blank" rel="noopener noreferrer">document repo</a> (Includes repository: raw text data).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://milliondollarhoods.pre.ss.ucla.edu/test-iframe-2/" target="_blank" rel="noopener noreferrer">Million Dollar Hoods</a>: A project at Ralph J. Bunche Center for African American Studies at UCLA that provides a wide-array of data related to incarceration and criminal justice.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://milliondollarhoods.pre.ss.ucla.edu/test-iframe-2/" target="_blank" rel="noopener noreferrer">GIS</a> (Includes interactive maps, GIS).</li>
+                                                <li>Navigate to their <a href="https://milliondollarhoods.pre.ss.ucla.edu/dashboards/" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                                <li>Navigate to their <a href="https://milliondollarhoods.pre.ss.ucla.edu/reports/" target="_blank" rel="noopener noreferrer">publications</a> (Includes data analytical pieces).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.ojjdp.gov/ojstatbb/dat.html" target="_blank" rel="noopener noreferrer">Office of Juvenile Justice and Delinquency Prevention</a>: Federal site providing access to various indicators and data analysis tools related to juvenile criminal justice.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.ojjdp.gov/ojstatbb/dat.html" target="_blank" rel="noopener noreferrer">data directory</a> (Includes Data Resources Directory).</li>
+                                                <li>Navigate to their <a href="https://www.ojjdp.gov/ojstatbb/compendium/" target="_blank" rel="noopener noreferrer">data directory</a> (Includes Data Resources Directory).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.sentencingproject.org/" target="_blank" rel="noopener noreferrer">State Sentencing Data</a>: The Sentencing Project is a criminal justice reform organization that advocates for effective and humane responses to crime prevention. Full datasets on crime states are available for each state.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.sentencingproject.org/research/detailed-state-data-tool/" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                                <li>Navigate to their <a href="https://www.sentencingproject.org/research/us-criminal-justice-data/" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes customizable dataset builder).</li>
+                                                <li>Navigate to their <a href="https://www.sentencingproject.org/research/resource-library/" target="_blank" rel="noopener noreferrer">publications</a> (Includes Publications, Search Engine).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.vera.org/news/expanding-our-knowledge-on-local-incarceration-trends" target="_blank" rel="noopener noreferrer">Vera Institute of Justice</a>: The Vera Institute of Justice has a searchable REPORTS database for research related to criminal justice reform that can be searched by topic, or region.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.vera.org/solutions-research" target="_blank" rel="noopener noreferrer">publications</a> (Includes Publications, Search Engine).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.washingtonpost.com/graphics/investigations/police-shootings-database/" target="_blank" rel="noopener noreferrer">Washington Post Fatal Force</a>: The Washington Post Fatal Force Project is an attempt to log every fatal shooting by an on-duty police officers since 2015. A full database is available.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                            
+                            <!-- Economic Justice -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Economic Justice</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="https://www.opportunityatlas.org/" target="_blank" rel="noopener noreferrer">The Opportunity Atlas</a>: The Opportunity Atlas examines which neighborhoods in America lead to the greatest intergenerational social mobility and relevant factors.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.opportunityatlas.org/" target="_blank" rel="noopener noreferrer">GIS</a> (Includes interactive maps, GIS).</li>
+                                                <li>Navigate to their <a href="https://opportunityinsights.org/wp-content/uploads/2018/10/Atlas-User-Guide.pdf" target="_blank" rel="noopener noreferrer">Documentation</a> (Includes User Guide, Docs).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.labor.ucla.edu/what-we-do/research-tools/quantitative-research/quantitative-surveys/" target="_blank" rel="noopener noreferrer">UCLA Labor Center</a>: Provides guidance on best practices around survey design, particularly for issues of labor rights, as well as an extensive database of reports from the center.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.labor.ucla.edu/resources/reports/" target="_blank" rel="noopener noreferrer">publications</a> (Includes data analytical pieces).</li>
+                                                <li>Navigate to their <a href="https://www.labor.ucla.edu/what-we-do/research-tools/quantitative-research/quantitative-surveys/" target="_blank" rel="noopener noreferrer">Education & Training</a> (Includes Education & Training, Survey Data).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                            
+                            <!-- Education -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Education</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="https://achieve.lausd.net/opendata" target="_blank" rel="noopener noreferrer">Los Angeles Unified School District</a>: General data on LAUSD and individual school sites.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://my.lausd.net/opendata/landing_page" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations, interactive maps).</li>
+                                                <li>Navigate to their <a href="https://my.lausd.net/opendata/dashboard?language=en&key=2" target="_blank" rel="noopener noreferrer">GIS</a> (Includes interactive maps, GIS).</li>
+                                                <li>Navigate to their <a href="https://my.lausd.net/webcenter/portal/OpenData/" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets, search engine).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.caschooldashboard.org/" target="_blank" rel="noopener noreferrer">CA School Dashboard</a>: The California School Dashboard is a state-wide database that provides broad data related to education by school district or county.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.caschooldashboard.org/reports/ca/2023" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                                <li>Navigate to their <a href="https://www.caschooldashboard.org/" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            CA School Accountability Report Card: Provides enrollment, demographic, educational attainment, etc. data for public and charter schools, districts, and the State.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://sarconline.org/public/userGuide" target="_blank" rel="noopener noreferrer">Documentation</a> (Includes User Guide, Docs).</li>
+                                                <li>Navigate to their <a href="https://sarconline.org/public/findASarc" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets, search engine).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.childstats.gov/pubs/" target="_blank" rel="noopener noreferrer">Childstats.gov</a>: Data sets concentrated on indicators related to children and families.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.childstats.gov/americaschildren/index.asp" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://www.childstats.gov/pubs/" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://datacenter.aecf.org/about" target="_blank" rel="noopener noreferrer">KidsCount Data Center</a>: Hundred of measures of well-being for kids across the nation, which can be focused down to Los Angeles.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://datacenter.aecf.org/" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations, interactive maps).</li>
+                                                <li>Navigate to their <a href="https://datacenter.aecf.org/data#USA/1/0/char/1" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations, interactive maps).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="http://nces.ed.gov/" target="_blank" rel="noopener noreferrer">National Center for Education Statistics (NCES)</a>: U.S. Department of Education's National Center for Education Statistics, this site provides different data tools to access annual and national statistics for all public elementary and secondary schools, and school districts across the U.S.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://nces.ed.gov/datalab/about" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                                <li>Navigate to their <a href="https://nces.ed.gov/surveys/international/ide/" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes customizable dataset builder).</li>
+                                                <li>Navigate to their <a href="https://www.nationsreportcard.gov/ndecore/landing" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes customizable dataset builder).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                            
+                            <!-- Environmental Justice -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Environmental Justice</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="https://oehha.ca.gov/calenviroscreen" target="_blank" rel="noopener noreferrer">CalEnviroScreen</a>: The California Environmental Office of Health Hazard Assessment (OEHHA) contains a multitude of data sets and tools related to environmental health, including pollutants burdens and health indicators for communities.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-40" target="_blank" rel="noopener noreferrer">Documentation</a> (Includes User Guide, Docs).</li>
+                                                <li>Navigate to their <a href="https://experience.arcgis.com/experience/11d2f52282a54ceebcac7428e6184203" target="_blank" rel="noopener noreferrer">GIS</a> (Includes interactive maps, GIS).</li>
+                                                <li>Navigate to their <a href="https://experience.arcgis.com/experience/ed5953d89038431dbf4f22ab9abfe40d/" target="_blank" rel="noopener noreferrer">GIS</a> (Includes interactive maps, GIS).</li>
+                                                <li>Navigate to their <a href="https://experience.arcgis.com/experience/6b863505f9454cea802f4be0b4b49d62/" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations, interactive maps).</li>
+                                                <li>Navigate to their <a href="https://calenviroscreen-oehha.hub.arcgis.com/#Reports" target="_blank" rel="noopener noreferrer">publications</a> (Includes Publications).</li>
+                                                <li>Navigate to their <a href="https://calenviroscreen-oehha.hub.arcgis.com/#Data" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets, GIS).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://ecoatlas.org/about/" target="_blank" rel="noopener noreferrer">EcoAtlas</a>: EcoAtlas aggregates datasets from many different sources, with many datasets being specific to California. Datasets related to water quality, vegetation, conservation, etc. can be found on the site.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://ecoatlas.org/data" target="_blank" rel="noopener noreferrer">data directory</a> (Includes directory of dataset repos).</li>
+                                                <li>Navigate to their <a href="https://ecoatlas.org/developers/" target="_blank" rel="noopener noreferrer">API</a> (Includes API docs).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.epa.gov/ejscreen" target="_blank" rel="noopener noreferrer">EJScreen</a>: EPA's environmental justice screening and mapping tool. Includes numerous environmental indicators.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://ejscreen.epa.gov/mapper/" target="_blank" rel="noopener noreferrer">GIS</a> (Includes interactive maps, GIS).</li>
+                                                <li>Navigate to their <a href="https://www.epa.gov/ejscreen/learn-use-ejscreen" target="_blank" rel="noopener noreferrer">Documentation</a> (Includes User Guide, Docs).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                            
+                            <!-- Food Insecurity -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Food Insecurity (Food Access)</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            Food Resources in California: Dataset mediated by la city controller listing food resources.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://controllerdata.lacity.org/dataset/Food-Resources-in-California/v2mg-qsxf/data_preview" target="_blank" rel="noopener noreferrer">Dataset</a> (Includes dataset).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.cafoodbanks.org/" target="_blank" rel="noopener noreferrer">CA Food Banks Hunger Data</a>: Food insecurity.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.cafoodbanks.org/hunger-data-reports/" target="_blank" rel="noopener noreferrer">publications</a> (Includes reports).</li>
+                                                <li>Navigate to their <a href="https://www.cafoodbanks.org/hunger-legislation-tracker/" target="_blank" rel="noopener noreferrer">document repo</a> (Includes policy tracker).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/go-to-the-atlas/" target="_blank" rel="noopener noreferrer">USDA Food Access Map</a>: A site that maps food access in the US.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/go-to-the-atlas/" target="_blank" rel="noopener noreferrer">GIS</a> (Includes interactive maps, GIS).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            US Census- Food Security Measures: Measures of food security by census tract.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.census.gov/data/datasets/time-series/demo/cps/cps-supp_cps-repwgt/cps-food-security.html" target="_blank" rel="noopener noreferrer">Dataset</a> (Includes dataset).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://datacommons.feedingamerica.org/" target="_blank" rel="noopener noreferrer">Feeding America Data Commons</a>: Collated data sets of various measures related to food insecurity, including temperature rises, health, income, etc.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://map.feedingamerica.org/" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                                <li>Navigate to their <a href="https://datacommons.feedingamerica.org/tools/map" target="_blank" rel="noopener noreferrer">GIS</a> (Includes interactive maps, GIS).</li>
+                                                <li>Navigate to their <a href="https://datacommons.feedingamerica.org/tools/timeline" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                                <li>Navigate to their <a href="https://datacommons.feedingamerica.org/tools/scatter" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                            
+                            <!-- Gender Justice -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Gender Justice</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="https://data2x.org/what-we-do/" target="_blank" rel="noopener noreferrer">Data 2X</a>: A collection of informative data related to gender.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://data2x.org/resource-center/" target="_blank" rel="noopener noreferrer">data repo</a> (Includes datasets, reports).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.oecd.org/gender/data/" target="_blank" rel="noopener noreferrer">OECD Gender Equality</a>: Includes indicators related to gender inequality, including education, employment and health. Only includes OECD member countries, as well as a few non-Western countries.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.oecd.org/gender/data/" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data dashboard, data visualizations).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://sdgdata.lamayor.org/5/" target="_blank" rel="noopener noreferrer">SDG- Gender Equity</a>: Datasets and reports on markers of gender equity in Los Angeles.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://sdgdata.lamayor.org/5/" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data dashboard, repository: datasets, data visualizations).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://evaw-global-database.unwomen.org/en" target="_blank" rel="noopener noreferrer">UN Women Global Database on Violence against Women</a>: A collated tracker with metrics on gender-based violence from across the world.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://evaw-global-database.unwomen.org/en" target="_blank" rel="noopener noreferrer">Dataset</a> (Includes dataset).</li>
+                                                <li>Navigate to their <a href="https://data.unwomen.org/data-portal/sdg" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://data.unwomen.org/data-portal/sdm" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://data.unwomen.org/data-portal/vaw-wps" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.womanstats.org/about.html" target="_blank" rel="noopener noreferrer">Woman Stats</a>: Dataset that compiles information on the status of women across the world.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.womanstats.org/research_and_papers.html" target="_blank" rel="noopener noreferrer">publications</a> (Includes publications).</li>
+                                                <li>Navigate to their <a href="https://www.womanstats.org/data.html" target="_blank" rel="noopener noreferrer">data repo</a> (Includes database, codebook).</li>
+                                                <li>Navigate to their <a href="https://www.youtube.com/playlist?list=PLOP8TCNT7EYDh6wnpWu-vAT8DKIbKKmtF" target="_blank" rel="noopener noreferrer">Documentation</a> (Includes User Guide, Docs).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                            
+                            <!-- Houseless Rights -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Houseless Rights</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="https://unequalcities.org/" target="_blank" rel="noopener noreferrer">UCLA Luskin Institute for Inequality and Democracy Unequal Cities</a>: A research coordination network designed to address the housing crisis in Los Angeles and other cities.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://unequalcities.org/scholarship/" target="_blank" rel="noopener noreferrer">publications</a> (Includes Publications).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://economicrt.org/publication/los-angeles-county-homeless-count-data-library/" target="_blank" rel="noopener noreferrer">Unhoused Street Count</a>: Data from yearly street count of unhoused people in Los Angeles.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://economicrt.org/publication/los-angeles-county-homeless-count-data-library/" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://sdgdata.lamayor.org/11-1-1/" target="_blank" rel="noopener noreferrer">Sustainable Development Goals Los Angeles</a>: Unhoused equity markers provided LA sustainable dev goals.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://sdgdata.lamayor.org/11-1-1/" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://immigrantdataca.org/" target="_blank" rel="noopener noreferrer">California Immigrant Data Portal</a>: A resource and progress tracker for immigrants and those serving immigrant communities across the state of California.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://immigrantdataca.org/data-summaries" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://nationalequityatlas.org/node/63161" target="_blank" rel="noopener noreferrer">National Equity Atlas: Rent Debt in America</a>: Dashboard including a host of data and metrics on rent debt at the national level.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://nationalequityatlas.org/node/63161" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations, interactive maps).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://missingbasti.com/" target="_blank" rel="noopener noreferrer">missingbasti</a>: The Missing Basti Project is an initiative to archive past and ongoing evictions in Delhi to question as well as mobilize action for the prevention of further evictions.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://missingbasti.com/" target="_blank" rel="noopener noreferrer">GIS</a> (Includes interactive maps, GIS).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                            
+                            <!-- Migration -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Migration</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            State of Immigrants LA: USC: Report on the state of immigration in Los Angeles, as well as some data visualizations.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://dornsife.usc.edu/eri/publications/soila-2023/" target="_blank" rel="noopener noreferrer">publications</a> (Includes reports).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://immigrantdataca.org/" target="_blank" rel="noopener noreferrer">California Immigrant Data Portal</a>: A resource and progress tracker for immigrants and those serving immigrant communities across the state of California.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://immigrantdataca.org/indicators/foreign-born" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://stateofblackimmigrants.com/" target="_blank" rel="noopener noreferrer">State of Black Immigrants</a>: Research Institute produces research reports and facts sheets on the state of Black immigrants and advocacy tools for Black organizations and allies.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://stateofblackimmigrants.com/" target="_blank" rel="noopener noreferrer">publications</a> (Includes reports).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                            
+                            <!-- Political Disenfranchisement -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Political Disenfranchisement</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="https://latino.ucla.edu/" target="_blank" rel="noopener noreferrer">Latino Policy and Politics Institute at UCLA</a>: LPPI at UCLA has a series of resources and research on voting rights. Data would need to be extracted from reports.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://latino.ucla.edu/research/?_resource=data-for-action" target="_blank" rel="noopener noreferrer">publications</a> (Includes data analytical pieces).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://ethics.lacity.org/mission/" target="_blank" rel="noopener noreferrer">Los Angeles Ethics Committee</a>: Open data portal maintained by the city of Los Angeles that allows constituents to view data related to election ethics and campaign contributions.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://ethics.lacity.org/data/campaigns/contributions/" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets, search engine).</li>
+                                                <li>Navigate to their <a href="https://ethics.lacity.org/data/hub" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://electionstudies.org/" target="_blank" rel="noopener noreferrer">American National Election Studies</a>: The American National Election Studies is a long-running research project that aims to capture voting trends across time in the US.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://electionstudies.org/data-tools/anes-guide/index.html" target="_blank" rel="noopener noreferrer">data repo</a> (Includes data reports, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://electionstudies.org/data-tools/anes-question-search/" target="_blank" rel="noopener noreferrer">data repo</a> (Includes Search Engine, data reports, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://electionstudies.org/data-tools/anes-continuity-guide/" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.mapresearch.org/democracy-maps/ratings_by_state" target="_blank" rel="noopener noreferrer">Democracy Map</a>: Tracks state election laws and policies that aim to disenfranchise marginalized groups, as well as recommendations on how to optimize civic engagement and protect electoral integrity.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.mapresearch.org/democracy-maps/ratings_by_state" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations, interactive maps).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.pewresearch.org/tools-and-resources/" target="_blank" rel="noopener noreferrer">Pew Research Center</a>: A nonpartisan fact tank that conducts polling and informs the public about issues and trends shaping the United States and the world.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.pewresearch.org/tools-and-resources/" target="_blank" rel="noopener noreferrer">data directory</a> (Includes directory: datasets, GIS, data training).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                            
+                            <!-- Public Health and Healthcare -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Public Health and Healthcare</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="https://healthpolicy.ucla.edu/programs/health-data/Pages/overview.aspx" target="_blank" rel="noopener noreferrer">UCLA Center for Health Policy Research</a>: DATA program exists to make it easy and understandable to a wide range of audiences and health advocates.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://healthpolicy.ucla.edu/our-work/training" target="_blank" rel="noopener noreferrer">education and training</a> (Includes user guide, training videos).</li>
+                                                <li>Navigate to their <a href="https://healthpolicy.ucla.edu/our-work/askchis" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data dashboard, repository: datasets, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://healthpolicy.ucla.edu/our-work/askchis-ne" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data dashboard, repository: datasets, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://healthpolicy.ucla.edu/our-work/covid-19-dashboards" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data dashboard, repository: datasets, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://healthpolicy.ucla.edu/our-work/health-profiles/adult-health-profiles" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data dashboard, data visualizations).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.chhs.ca.gov/" target="_blank" rel="noopener noreferrer">CA Health and Community Services Open Data</a>: Non confidential health and human services data that can be easily retrieved, combined, downloaded, sorted, searched, and analyzed.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://data.chhs.ca.gov/dataset" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets, search engine).</li>
+                                                <li>Navigate to their <a href="https://gis.data.chhs.ca.gov/" target="_blank" rel="noopener noreferrer">GIS</a> (Includes interactive maps, GIS).</li>
+                                                <li>Navigate to their <a href="https://data.chhs.ca.gov/pages/training" target="_blank" rel="noopener noreferrer">Documentation</a> (Includes User Guide, Docs).</li>
+                                                <li>Navigate to their <a href="https://data.chhs.ca.gov/showcase" target="_blank" rel="noopener noreferrer">data directory</a> (Includes Data Resources Directory).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Data-and-Statistics-.aspx" target="_blank" rel="noopener noreferrer">CA Department of Public Health Data and Statistics</a>: Access to public health data and information, such as queries, resources, statistics, surveys, informatics, GIS, and health indicators.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Data-Applications.aspx" target="_blank" rel="noopener noreferrer">data request</a> (Includes Data Request).</li>
+                                                <li>Navigate to their <a href="https://cal-vida.cdph.ca.gov/VSQWeb" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                                <li>Navigate to their <a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/County-Health-Status-Profiles.aspx" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets).</li>
+                                                <li>Navigate to their <a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/MMICP-Data-and-Statistics.aspx" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets).</li>
+                                                <li>Navigate to their <a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/End-of-Life-Option-Act-.aspx" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://covidtracking.com/" target="_blank" rel="noopener noreferrer">The COVID tracking Project</a>: extensive data on all things covid.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://covidtracking.com/data/national" target="_blank" rel="noopener noreferrer">Dataset</a> (Includes dataset).</li>
+                                                <li>Navigate to their <a href="https://covidtracking.com/data" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets, search engine).</li>
+                                                <li>Navigate to their <a href="https://covidtracking.com/race/dashboard" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets, search engine).</li>
+                                                <li>Navigate to their <a href="https://covidtracking.com/data/download" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets, search engine).</li>
+                                                <li>Navigate to their <a href="https://covidtracking.com/data/api" target="_blank" rel="noopener noreferrer">API</a> (Includes API docs).</li>
+                                                <li>Navigate to their <a href="https://covidtracking.com/data/charts" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data dashboard, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://covidtracking.com/data/hospital-facilities" target="_blank" rel="noopener noreferrer">GIS</a> (Includes interactive maps, GIS).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.covid-inequities.info/" target="_blank" rel="noopener noreferrer">COVID-19 Health Inequities in Cities</a>: Compares and tracks inequities across individual subgroups, neighborhoods, and cities in the US.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.covid-inequities.info/guide/" target="_blank" rel="noopener noreferrer">Documentation</a> (Includes User Guide, Docs).</li>
+                                                <li>Navigate to their <a href="https://drexel-uhc.shinyapps.io/bchc_covid19/_w_5ade4414/" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations, interactive maps).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.kff.org/racial-equity-and-health-policy/dashboard/racial-equity-and-health-data-dashboard/#racialbias" target="_blank" rel="noopener noreferrer">Kaiser Family Foundation Racial Equity and Health Data Dashboard</a>: Provides data on the intersection between public health and racial equity.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.kff.org/racial-equity-and-health-policy/dashboard/racial-equity-and-health-data-dashboard/#racialbias" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes Report, data dashboard, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://www.kff.org/polling/racial-equity-and-health-data-dashboard/" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets, search engine).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                            
+                            <!-- Race and Racial Justice -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Race and Racial Justice</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="http://www.hatecrimemap.com/" target="_blank" rel="noopener noreferrer">UCLA American Indian Studies Center Hate Crime Map</a>: A crowd-sourced platform that enables victims to report instances of hate crimes maintained by the UCLA American Studies Center.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="http://www.hatecrimemap.com/" target="_blank" rel="noopener noreferrer">GIS</a> (Includes interactive maps, GIS).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.racecounts.org/" target="_blank" rel="noopener noreferrer">Race Counts</a>: A database that provides racial equity indicators of the Los Angeles area.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.racecounts.org/explore-the-data/map/" target="_blank" rel="noopener noreferrer">GIS</a> (Includes interactive maps, GIS).</li>
+                                                <li>Navigate to their <a href="https://www.racecounts.org/county/contra-costa/" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data dashboard, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://www.racecounts.org/state_races/california/?race=native%20american" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data dashboard, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://www.racecounts.org/explore-the-data/disparity-outcome-rankings/" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets).</li>
+                                                <li>Navigate to their <a href="https://www.racecounts.org/explore-the-data/disparity-outcome-scatterplot/" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://libguides.calstatela.edu/c.php?g=793612&p=5675845" target="_blank" rel="noopener noreferrer">Asian American Statistics</a>: California State Library list of various sites that have data on Asian American populations.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://libguides.calstatela.edu/c.php?g=793612&p=5675845" target="_blank" rel="noopener noreferrer">data directory</a> (Includes Data Resources Directory).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://aapidata.com/" target="_blank" rel="noopener noreferrer">AAPI Data</a>: Aggregated resources that aim is to provide a comprehensive and up-to-date resource on datasets on Asian Americans and NHPIs that are publicly available.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://aapidata.com/stats/national/" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets).</li>
+                                                <li>Navigate to their <a href="https://aapidata.com/surveys/" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets).</li>
+                                                <li>Navigate to their <a href="http://facts.aapidata.com/racialdata/" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes customizable dataset builder).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="http://blackyouthproject.com/research/" target="_blank" rel="noopener noreferrer">Black Youth Project</a>: A research institute at University of Chicago that examines the attitudes, resources, and cultures of the young, urban black millennial.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="http://blackyouthproject.com/research/" target="_blank" rel="noopener noreferrer">data directory</a> (Includes Data Resources Directory).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://genforwardsurvey.com/" target="_blank" rel="noopener noreferrer">GenForward Survey</a>: The GenForward Survey is the first of its kind—a nationally representative survey that pays special attention to how race and ethnicity shape how young adults, both Millennials and Gen Z-ers, experience and think about the world.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://genforwardsurvey.com/genforward-data/" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.fbi.gov/how-we-can-help-you/more-fbi-services-and-information/ucr/hate-crime" target="_blank" rel="noopener noreferrer">Hate Crime Statistics</a>: Site maintained by the FBI that collates data from local, state, tribal, and federal law enforcement agencies related to recognize and document hate crimes.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/explorer/crime/hate-crime" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data reports, repository: datasets, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://www.fbi.gov/how-we-can-help-you/more-fbi-services-and-information/ucr/publications#Hate-Crime%20Statistics" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://minorityhealth.hhs.gov/minority-population-profiles" target="_blank" rel="noopener noreferrer">Minority Population Profiles</a>: Data maintained by the US government outlining pertinent outcomes related to demographic, health, education, and other measures.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://minorityhealth.hhs.gov/minority-population-profiles" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets, search engine).</li>
+                                                <li>Navigate to their <a href="https://minorityhealth.hhs.gov/minority-health-svi" target="_blank" rel="noopener noreferrer">Dataset</a> (Includes dataset).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://nationalequityatlas.org/" target="_blank" rel="noopener noreferrer">National Equity Atlas</a>: National organization that publishes the National Equity Index, among others data pertinent to racial equity in the United States.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://nationalequityatlas.org/research/racial_equity_index/index" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                                <li>Navigate to their <a href="https://nationalequityatlas.org/indicators/Race-ethnicity" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes Generate Visualizations and Data Reports).</li>
+                                                <li>Navigate to their <a href="https://nationalequityatlas.org/lab/data" target="_blank" rel="noopener noreferrer">Documentation</a> (Includes User Guide, Docs).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.ncai.org/policy-research-center/research-data/data" target="_blank" rel="noopener noreferrer">NCAI Policy Research Center</a>: National Congress of American Indians collects and publishes their own data on past and present issues facing Native communities in the United states.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.ncai.org/policy-research-center/research-data/data" target="_blank" rel="noopener noreferrer">data directory</a> (Includes Data Resources Directory).</li>
+                                                <li>Navigate to their <a href="https://archive.ncai.org/policy-research-center/research-data/data-resources" target="_blank" rel="noopener noreferrer">data directory</a> (Includes Data Resources Directory).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.icpsr.umich.edu/web/pages/RCMD/index.html" target="_blank" rel="noopener noreferrer">Resource Center for Minority Data</a>: The Resource Center for Minority Data collects and publishes a variety of information that pertains to minority groups, including housing, education, discrimination, etc. Data can be filtered by location.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://www.icpsr.umich.edu/web/RCMD/search/studies?q=" target="_blank" rel="noopener noreferrer">data repo</a> (Includes repository: datasets, search engine).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                            
+                            <!-- State Violence -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">State Violence</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            <a href="https://projects.scpr.org/officer-involved/" target="_blank" rel="noopener noreferrer">KPCC Officer Involved Shooting</a>: A KPCC investigation into officer involved shootings in the Los Angeles area.
+                                        </li>
+                                        <li>
+                                            <a href="https://fatalencounters.org/" target="_blank" rel="noopener noreferrer">Fatal Encounters</a>: Fatal Encounters is a partial database of fatal police encounters, leading to the creation of the National Officer-Involved Homicide Database with a team at USC.
+                                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                                <li>Navigate to their <a href="https://fatalencounters.org/our-visualizations/" target="_blank" rel="noopener noreferrer">data dashboard</a> (Includes data dashboard, data visualizations).</li>
+                                                <li>Navigate to their <a href="https://docs.google.com/spreadsheets/d/1dKmaV_JiWcG8XBoRgP8b4e9Eopkpgt7FL7nyspvzAsE/edit#gid=0" target="_blank" rel="noopener noreferrer">Dataset</a> (Includes dataset).</li>
+                                                <li>Navigate to their <a href="https://fatalencounters.org/view/person/" target="_blank" rel="noopener noreferrer">Customizable Data Tool</a> (Includes customizable dataset builder).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.washingtonpost.com/graphics/investigations/police-shootings-database/" target="_blank" rel="noopener noreferrer">Washington Post Fatal Force</a>: The Washington Post Fatal Force Project is an attempt to log every fatal shooting by on-duty police officers since 2015. A full database is available.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Learn to Use Data Section -->
+                <section id="learn-to-use-data" class="content-section">
+                    <h1 class="section-title">Use_Data():</h1>
+                    
+                    <div id="online-tutorials" class="subsection">
+                        <h2 class="subsection-title">Online Tutorials</h2>
+                        <p class="placeholder-text">
+                            There are many online resources on how to use open data to conduct data analysis. Below is an initial compilation of some recommended resources, but there are many more available on the internet.
+                        </p>
+                        
+                        <div class="accordion-container" style="margin-top: 25px;">
+                            <!-- U.S. Census Data -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">U.S. Census Data</summary>
+                                <div class="accordion-content">
+                                    <p class="placeholder-text">
+                                        <a href="https://www.census.gov/data/what-is-data-census-gov/guidance-for-data-users/video-tutorials.html" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">U.S. Census Data:</a> Tips and videos on how to utilize U.S. Census data, including exporting excel tables, cleaning data, and creating a map with census tracts.
+                                    </p>
+                                </div>
+                            </details>
+                            
+                            <!-- Online tutorials by U.S. governmental offices -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Online tutorials by U.S. governmental offices</summary>
+                                <div class="accordion-content">
+                                    <p class="placeholder-text">
+                                        Many of the U.S. governmental offices maintain some online tutorials, including <a href="https://www.bls.gov/help/" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">U.S. Bureau of Labor Statistics</a>, the <a href="https://nces.ed.gov/datatools/" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">National Center for Education Statistics</a>, and the <a href="https://bjs.ojp.gov/data/data-analysis-tools" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">U.S. Bureau of Justice Statistics</a>. There are many more resources that can be found depending on your interest.
+                                    </p>
+                                </div>
+                            </details>
+                            
+                            <!-- Resources for learning data analysis tools and software -->
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Resources for learning data analysis tools and software</summary>
+                                <div class="accordion-content">
+                                    <ul class="resource-link-list">
+                                        <li>
+                                            Excel is a readily available spreadsheet software that can be really helpful in conducting statistical analysis. There are many helpful tutorials on Youtube, including <a href="https://www.youtube.com/watch?v=lH7HfwUFnYA&list=PLUaB-1hjhk8Hyd5NiPQ9CND82vNodlFF5&ab_channel=AlexTheAnalyst" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">this</a> one and this one. Excel can even be used for <a href="https://www.youtube.com/watch?v=pW9kqqHgZyQ&list=PL-n8f1cY_Qw8RKe8y_2Jmg-z9pRFnAf4H&ab_channel=DougH" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">GIS analysis</a>.
+                                        </li>
+                                        <li>
+                                            Geographic Information System is a way to visualize and store geographic data. A list of open-access software can be found <a href="https://gisgeography.com/free-gis-software/" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">here</a> and specific tutorials can be found <a href="https://gisgeography.com/learn-gis/" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">here</a>. QGIS is an open-access software that comes particularly recommended, but both <a href="https://www.arcgis.com/index.html" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">ArcGIS</a> and <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">Python</a> are widely used for GIS analysis.
+                                        </li>
+                                        <li>
+                                            <a href="https://posit.co/download/rstudio-desktop/" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">R</a> is an open-access language and environment for statistical computing and graphics. Because you program it to do what you want, it is incredibly versatile but does have a steeper learning curve. Some recommended learning resources include <a href="https://moderndive.com/1-getting-started.html" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">A Modern Dive into R by Chester Ismay and Albert Y. Kim</a> or <a href="https://r4ds.had.co.nz/" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">R for Data Science by Hadley Whickham and Garrett Grolemund</a>. There is also a very helpful <a href="https://www.youtube.com/watch?v=jG6pdz4DQu8&ab_channel=RichardLanders" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">video series</a> by Richard Landers and a course by <a href="https://www.codecademy.com/learn/learn-r" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">Codeacademy</a>.
+                                        </li>
+                                        <li>
+                                            <a href="https://www.tableau.com/products/public#:~:text=Tableau%20Public%20is%20a%20free,publicly%20share%20data%20visualizations%20online." target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">Tableau</a> is a data visualization platform that has a free version. There are many <a href="https://www.youtube.com/watch?v=fO7g0pnWaRA&ab_channel=Simplilearn" target="_blank" rel="noopener noreferrer" style="color: var(--ucla-blue); text-decoration: none;">free online videos</a> that can help you learn how to use it.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div id="data-analysis-walkthroughs" class="subsection">
+                        <h2 class="subsection-title">Data Analysis Walkthroughs</h2>
+                        <p class="placeholder-text">
+                            This section of the LA Data Justice Hub presents examples of data analysis research pipelines, illustrating different ways to approach datasets and extract insights. Data analysis is inherently exploratory—there is no single path, but rather multiple methods depending on the questions asked and the tools used. By showcasing concrete examples, from data collection to analysis, visualization, and communication, we aim to provide useful reference points for researchers, advocates, and policymakers. These walkthroughs highlight the diversity of approaches while offering practical guidance for structuring and conducting data-driven investigations.
+                        </p>
+                        
+                        <div class="accordion-container" style="margin-top: 25px;">
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Walkthrough 1: Rethinking the Digital Divide</summary>
+                                <div class="accordion-content">
+                                    <p class="author-title" style="margin-top: 0; margin-bottom: 20px;">By Christian Nielsen, 02/01/2025</p>
+                                    
+                                    <p class="placeholder-text">
+                                        This project provides a hands-on exploration of Los Angeles census data through interactive tools and tutorials, challenging traditional narratives of the digital divide. By walking through data collection, analysis, and visualization techniques, users can critically examine how digital access disparities are shaped by infrastructure rather than simplistic assumptions about technological awareness.
+                                    </p>
+                                    
+                                    <h4 style="color: var(--ucla-blue); font-size: 16px; font-weight: 600; margin-top: 25px; margin-bottom: 15px;">Article Abstract</h4>
+                                    <p class="placeholder-text">
+                                        This article critically examines the dominant narratives surrounding the "digital divide," challenging reductive understandings of digital access disparities. Through an analysis of census data on internet and computer access in Los Angeles, the study illustrates how statistical interpretations often flatten the complexities of digital inequities, reinforcing harmful stereotypes. Using data visualization techniques, the research highlights the limitations of the binary framing of digital access and demonstrates how marginalized communities actively navigate and adapt to infrastructural barriers. By comparing broadband and computer access with mobile device and data usage, the article deconstructs the myth of totalizing disenfranchisement, showing that digital inequities are not merely a matter of access but are embedded within structural and racialized infrastructural inequalities. The findings emphasize the need for a more nuanced discourse that recognizes both systemic constraints and the agency of communities in shaping their digital experiences. This work contributes to the broader discussions on data justice, digital equity, and the socio-political implications of how access is framed in policy and public discourse.
+                                    </p>
+                                    <p class="placeholder-text">
+                                        Click here to read the full article. [forthcoming]
+                                    </p>
+                                    
+                                    <h4 style="color: var(--ucla-blue); font-size: 16px; font-weight: 600; margin-top: 25px; margin-bottom: 15px;">Data Collection</h4>
+                                    <p class="placeholder-text">
+                                        The Data Collection section includes two collaborative Jupyter notebooks structured as explicit, pre-coded tutorials. These walkthroughs guide users through the process of downloading U.S. Census data and conducting example data analyses using Python. By providing step-by-step code and explanations, these tutorials serve as practical resources for exploring demographic and infrastructural data, helping to bridge the gap between raw datasets and meaningful insights.
+                                    </p>
+                                    <ul class="resource-link-list" style="margin-top: 15px;">
+                                        <li>
+                                            <a href="https://colab.research.google.com/drive/1Uf3ZCF3rMiFAUViZwNLreWalRihiuChW?usp=drive_link" target="_blank" rel="noopener noreferrer">Data Collection Notebook 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://colab.research.google.com/drive/1w9gQU5TIJ93G0c8TaqrUQ0f1LN45bGZk?usp=drive_link" target="_blank" rel="noopener noreferrer">Data Collection Notebook 2</a>
+                                        </li>
+                                    </ul>
+                                    
+                                    <h4 style="color: var(--ucla-blue); font-size: 16px; font-weight: 600; margin-top: 25px; margin-bottom: 15px;">Analysis and Representation</h4>
+                                    <p class="placeholder-text">
+                                        The Tableau dashboard provides an interactive tool for exploring Los Angeles census data, enabling a critical examination of the so-called digital divide. By shifting between granular local insights and broader citywide trends, the dashboard challenges the empirical validity of the term, emphasizing that disparities in digital access primarily reveal infrastructural inequalities rather than differences in awareness or technological literacy across communities.
+                                    </p>
+                                    
+                                    <details class="accordion-item" style="margin-top: 20px;">
+                                        <summary class="accordion-header">Tableau GIS Dashboard</summary>
+                                        <div class="accordion-content">
+                                            <div style="width: 100%; height: 700px; overflow: hidden; margin: 20px 0;">
+                                                <iframe frameborder="0" marginheight="0" marginwidth="0" title="Data Visualization" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: none;" src="https://public.tableau.com/views/LADJH_DigiDemog_V4/LACountyDigitalInternetAccessViewer2?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fpublic.tableau.com%2F&:embed_code_version=3&:tabs=no&:toolbar=yes&:animate_transition=yes&:display_static_image=no&:display_spinner=no&:display_overlay=yes&:display_count=yes&:language=en-US&:loadOrderID=0&:device=desktop"></iframe>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Gallery Section -->
+                <section id="gallery" class="content-section">
+                    <h1 class="section-title">Gallery of Student Projects</h1>
+                    <p class="placeholder-text">
+                        This is placeholder text for the Gallery of Student Projects section. This section will showcase data justice projects created by students at UCLA and other institutions. These projects demonstrate creative and impactful uses of data to address social justice issues, serving as inspiration and examples for others interested in data justice work. Each project will include a description, methodology, findings, and links to code or interactive visualizations where available.
+                    </p>
+                </section>
+
+                <!-- Feedback Section -->
+                <section id="feedback" class="content-section">
+                    <h1 class="section-title">Feedback for the Hub</h1>
+                    <p class="placeholder-text">
+                        Please contribute to this site by filling out this brief survey to help us improve:
+                    </p>
+                    
+                    <div style="text-align: center; margin: 40px 0;">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe1_g6cNQVvt5ffM3KDOU_bEc2pEEOXS8c5LUjPrU9izKkxrQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="feedback-button">Feedback Form</a>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
