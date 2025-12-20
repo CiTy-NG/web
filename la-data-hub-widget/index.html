@@ -5,6 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LA Data Justice Hub</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .authors-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin: 30px 0;
+        }
+        
+        .author-card {
+            text-align: center;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .author-card.expanded {
+            width: 100%;
+        }
+        
+        .author-card:not(.expanded) {
+            max-width: 300px;
+            width: 300px;
+            margin: 0 auto;
+        }
+        
+        .author-image-wrapper {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: 0 auto 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease, height 0.3s ease;
+        }
+        
+        .author-card.expanded .author-image-wrapper {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .author-image-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .author-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .author-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(39, 116, 174, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .author-image-wrapper:hover .author-overlay {
+            opacity: 1;
+        }
+        
+        .view-bio-text {
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .author-name {
+            margin: 15px 0 5px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--ucla-blue, #2774AE);
+        }
+        
+        .author-title {
+            margin: 0 0 15px;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .author-bio {
+            margin-top: 20px;
+            text-align: left;
+            padding: 30px;
+            background: #000000;
+            color: #ffffff;
+            border-radius: 8px;
+            animation: slideDown 0.3s ease;
+        }
+        
+        .author-bio.hidden {
+            display: none;
+        }
+        
+        .author-bio .placeholder-text {
+            color: #ffffff;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .authors-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .author-card {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="widget-container" id="widgetContainer">
@@ -41,7 +174,7 @@
                             <a href="#about" class="toc-link" data-section="about">About():</a>
                             <ul class="toc-sublist">
                                 <li><a href="#what-is-hub" class="toc-sublink" data-section="what-is-hub">The LA Data Justice Hub</a></li>
-                                <li><a href="#who-are-authors" class="toc-sublink" data-section="who-are-authors">It's People</a></li>
+                                <li><a href="#who-are-authors" class="toc-sublink" data-section="who-are-authors">Authors & Contributors</a></li>
                             </ul>
                         </li>
                         <li class="toc-item">
@@ -121,36 +254,58 @@
                     </div>
 
                     <div id="who-are-authors" class="subsection">
-                        <h2 class="subsection-title">It's People</h2>
+                        <h2 class="subsection-title">Authors & Contributors</h2>
                         
                         <h3 class="content-heading">Authors:</h3>
                         
-                        <h4 class="author-name">Dr. Munia Bhaumik</h4>
-                        <p class="author-title">Principal Investigator and Founder</p>
-                        <p class="placeholder-text">
-                            Dr. Munia Bhaumik is the Program Director of Mellon Social Justice Curricular Initiatives and an award-winning scholar in comparative literature, politics, and law. She is an alumna of UCLA, where she earned an M.A. in Urban Planning. Her research and teaching focus on critiquing racial and gender inequities, as well as examining the various social factors that determine whose lives are valued before the law.
-                        </p>
-                        <p class="placeholder-text">
-                            Dr. Bhaumik's academic work reimagines citizenship and democracy, particularly through the lens of vulnerability, exploring how marginalized groups such as noncitizen refugees, migrant workers, incarcerated individuals, and undocumented detainees play a crucial role in social systems.
-                        </p>
-                        <p class="placeholder-text">
-                            She holds a PhD in Comparative Literature from the University of California, Berkeley, and has taught at Emory University in Atlanta. There, she worked to strengthen alliances between new Asian/Latinx immigrant communities and African American voting rights organizations in the South, while also developing an undergraduate program in comparative literature and critical theory.
-                        </p>
-                        <p class="placeholder-text">
-                            Dr. Bhaumik has received prestigious awards, including the Stanford Humanities Center, the Herman Melville Society, and the Cornell Society for the Humanities faculty awards. Her book, In Liberty's Shadow: The Noncitizen in American Letters and Law, analyzes key literary and philosophical texts shaping American political culture before 1900, advocating for a democratic ethos of recognition for the noncitizen.
-                        </p>
-                        <p class="placeholder-text">
-                            With a background as a Spanish-speaking labor and community organizer in Los Angeles, Dr. Bhaumik shaped national debates on social justice through direct action. Motivated by the intersection of the humanities and social movements, her work engages with abolition, noncitizen citizenship, and the fight for equal rights among marginalized communities.
-                        </p>
-                        
-                        <h4 class="author-name">Christian Nielsen Garcia</h4>
-                        <p class="author-title">PhD Student, Department of Information Studies</p>
-                        <p class="placeholder-text">
-                            Christian Nielsen Garcia's current research investigates the socio-technical dynamics of decentralized governance, with a particular focus on Decentralized Autonomous Organizations (DAOs). His work aims to develop innovative metrics that more accurately capture political decentralization. By utilizing Natural Language Processing, Network Analysis, and agent-based modeling, Garcia examines participation and representation dynamics to inform the creation of more equitable governance systems. He is a recipient of the Mellon GSE Grant, the Social Science Research Council (SSRC) Award, and the Berkeley Center for Responsible Decentralized Intelligence Award.
-                        </p>
-                        <p class="placeholder-text">
-                            In addition, Garcia is working on the development of tools that treat political antagonism as a valuable asset in decision-making processes, contributing to frameworks that enhance collective intelligence and foster innovation in digital governance. These efforts reflect Garcia's broader commitment to advancing sustainable, accountable, and participatory governance models, both online and offline.
-                        </p>
+                        <div class="authors-container">
+                            <div class="author-card">
+                                <div class="author-image-wrapper" onclick="toggleBio('munia-bio')">
+                                    <img src="images/Munia_Temp_HS.jpg" alt="Dr. Munia Bhaumik" class="author-image">
+                                    <div class="author-overlay">
+                                        <span class="view-bio-text">Click to view bio</span>
+                                    </div>
+                                </div>
+                                <h4 class="author-name">Dr. Munia Bhaumik</h4>
+                                <p class="author-title">P.I., Founder, and Co-Author</p>
+                                <div id="munia-bio" class="author-bio hidden">
+                                    <p class="placeholder-text">
+                                        Dr. Munia Bhaumik is the Program Director of Mellon Social Justice Curricular Initiatives and an award-winning scholar in comparative literature, politics, and law. She is an alumna of UCLA, where she earned an M.A. in Urban Planning. Her research and teaching focus on critiquing racial and gender inequities, as well as examining the various social factors that determine whose lives are valued before the law.
+                                    </p>
+                                    <p class="placeholder-text">
+                                        Dr. Bhaumik's academic work reimagines citizenship and democracy, particularly through the lens of vulnerability, exploring how marginalized groups such as noncitizen refugees, migrant workers, incarcerated individuals, and undocumented detainees play a crucial role in social systems.
+                                    </p>
+                                    <p class="placeholder-text">
+                                        She holds a PhD in Comparative Literature from the University of California, Berkeley, and has taught at Emory University in Atlanta. There, she worked to strengthen alliances between new Asian/Latinx immigrant communities and African American voting rights organizations in the South, while also developing an undergraduate program in comparative literature and critical theory.
+                                    </p>
+                                    <p class="placeholder-text">
+                                        Dr. Bhaumik has received prestigious awards, including the Stanford Humanities Center, the Herman Melville Society, and the Cornell Society for the Humanities faculty awards. Her book, In Liberty's Shadow: The Noncitizen in American Letters and Law, analyzes key literary and philosophical texts shaping American political culture before 1900, advocating for a democratic ethos of recognition for the noncitizen.
+                                    </p>
+                                    <p class="placeholder-text">
+                                        With a background as a Spanish-speaking labor and community organizer in Los Angeles, Dr. Bhaumik shaped national debates on social justice through direct action. Motivated by the intersection of the humanities and social movements, her work engages with abolition, noncitizen citizenship, and the fight for equal rights among marginalized communities.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="author-card">
+                                <div class="author-image-wrapper" onclick="toggleBio('christian-bio')">
+                                    <img src="../images/UCLA_HS_CNG.JPG" alt="Christian Nielsen Garcia" class="author-image">
+                                    <div class="author-overlay">
+                                        <span class="view-bio-text">Click to view bio</span>
+                                    </div>
+                                </div>
+                                <h4 class="author-name">Christian Nielsen Garcia</h4>
+                                <p class="author-title">Co-Author, Researcher, Web Design & Developer</p>
+                                <div id="christian-bio" class="author-bio hidden">
+                                    <p class="placeholder-text">
+                                        Christian Nielsen Garcia is a PhD student in Information Studies at UCLA and the UCLA Mellon Data Justice Initiatives Graduate Student Researcher. He is a recipient of the UC Berkeley RDI AI & Decentralization Innovation Award and holds an MSc in Social Data Science from the University of Copenhagen, where he served as Vice-Chair of the program's Board of Studies. As a Mellon Mays Undergraduate Fellow at Cornell, he majored in Performing and Media Arts (magna cum laude, Honors) with a focus on Digital Media Studies, and minors in Anthropology and Comparative Literature.
+                                    </p>
+                                    <p class="placeholder-text">
+                                        He has worked on digital governance projects focused on Europe, including with the Center for AI and Digital Policy, where he contributed to the Artificial Intelligence and Democratic Values Index, assessing national AI and Digital Rights policies across European countries. His current research leverages political theory and data science to inform the design of digital information systems, with a focus on decentralization, blockchain governance, and Artificial Collective Intelligence.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                         
                         <h3 class="content-heading">Past Contributors and Co-authors</h3>
                         
@@ -1267,5 +1422,42 @@
     </div>
 
     <script src="app.js"></script>
+    <script>
+        function toggleBio(bioId) {
+            const bio = document.getElementById(bioId);
+            const authorCard = bio ? bio.closest('.author-card') : null;
+            
+            if (!bio || !authorCard) return;
+            
+            // Get all author cards and bios
+            const allCards = document.querySelectorAll('.author-card');
+            const allBios = document.querySelectorAll('.author-bio');
+            
+            const isCurrentlyExpanded = !bio.classList.contains('hidden');
+            
+            if (isCurrentlyExpanded) {
+                // Closing this bio
+                bio.classList.add('hidden');
+                authorCard.classList.remove('expanded');
+            } else {
+                // Opening this bio - close all others first
+                allBios.forEach(b => {
+                    b.classList.add('hidden');
+                });
+                allCards.forEach(card => {
+                    card.classList.remove('expanded');
+                });
+                
+                // Open this bio and expand this card
+                bio.classList.remove('hidden');
+                authorCard.classList.add('expanded');
+                
+                // Scroll to the expanded card
+                setTimeout(() => {
+                    authorCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
+    </script>
 </body>
 </html>
