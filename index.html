@@ -22,16 +22,16 @@
         <header id="header">
             <nav>
                 <a href="index.html" class="active">About</a>
-                <a href="publications.html">Publications</a>
+                <a href="publications.html">Publications &amp; Projects</a>
                 <a href="tools.html">Stuff</a>
             </nav>
         </header>
 
         <!-- Main -->
-        <div id="main">
+        <div id="main" class="has-side-panel">
 
             <!-- Left Column -->
-            <div>
+            <div class="side-panel">
                 <!-- Profile Section -->
                 <section class="profile-section">
                     <div class="profile-image-container">
@@ -43,18 +43,26 @@
                         
                         <!-- Introduction Text -->
                         <div class="intro-text">
-                            <p class="intro-prefix">I am an Information Scientist with a passion for</p>
-                            <p class="intro-main">automation, decentralization, and digital protocols for political emancipation</p>
+                            <p class="intro-main">Information Scientist and PhD Student at UCLA.</p>
+                            <p class="intro-prefix">Researching AI, swarm intelligence, collective intelligence, multi-agent systems, and decentralized governance.</p>
                         </div>
-                        
+
                         <!-- Degrees Section -->
                         <div class="degrees-section">
                             <h2 class="degrees-title">Degrees</h2>
                             <div class="degrees-list">
-                                <p>PhD Student in Information Studies, UCLA (current)</p>
+                                <p>PhD Student in Information Studies, UCLA (Current)</p>
                                 <p>MSc in Social Data Science, University of Copenhagen</p>
                                 <p>BA in Performing and Media Arts, Cornell University</p>
-                                <p class="ba-details">(Focus: Digital Media; Minors: Anthropology, Comparative Literature)</p>
+                                <p class="ba-details">(Minors: Anthropology, Comparative Literature)</p>
+                            </div>
+                        </div>
+
+                        <!-- Funding Section -->
+                        <div class="degrees-section">
+                            <h2 class="degrees-title">Funding</h2>
+                            <div class="degrees-list">
+                                <p>Mercatus Fellowship (George Mason University), UC Berkeley Center for Digital Assets (CDA) Research Award, Berkeley RDI AI &amp; Decentralization Award, GSE Predoctoral Research Grant (SSRC / Mellon Mays).</p>
                             </div>
                         </div>
                     </div>
@@ -62,32 +70,9 @@
 
                 <!-- CV Section -->
                 <section>
-                    <h2 class="cv-title">CV</h2>
-                    <div class="pdf-viewer">
-                        <div id="verification-container">
-                            <p>Please enter your full name and check the box to view the CV:</p>
-                            <input type="text" id="full-name" placeholder="Enter your full name">
-                            <div>
-                                <input type="checkbox" id="demo-human" name="demo-human">
-                                <label for="demo-human">I am a human</label>
-                            </div>
-                            <button onclick="checkVerification()">View CV</button>
-                        </div>
-                        <div id="cv-actions" style="display:none;">
-                            <div class="cv-buttons">
-                                <button onclick="printCV()" class="button">Print</button>
-                                <button onclick="downloadCV()" class="button">Download</button>
-                                <button onclick="maximizeCV()" class="button">Maximize</button>
-                            </div>
-                        </div>
-                        <div id="pdf-overlay" style="display:none;">
-                            <div class="pdf-overlay-content">
-                                <button onclick="closeMaximize()" class="close-button">×</button>
-                                <iframe src="CTNG_CV_F2025.pdf" width="100%" height="100%"></iframe>
-                            </div>
-                        </div>
-                    </div>
+                    <button type="button" class="cv-open-button" onclick="openCV()">CV</button>
                 </section>
+
             </div>
 
             <!-- Right Column -->
@@ -95,55 +80,24 @@
             <section id="one">
                 <div class="inner">
                     <h2 class="centered-header">WHO I AM</h2>
-                    <div class="section-blocks">
-                        <div>
-                            <div class="toggle-header" onclick="toggleContent('researcher')">
-                                RESEARCH INTERESTS
-                            </div>
-                            <div id="researcher" class="toggle-content">
-                                My research centers on how digital cooperation and decision-support systems shape political alignment and conflict, guiding how people coordinate, disagree, and negotiate belonging in decentralized or algorithmically mediated settings. My work is informed by conversations in knowledge infrastructures, computational social science, HCI, and CSCW concerning how digital systems structure collaboration and political agency.
-                            </div>
-                        </div>
-                        <div>
-                            <div class="toggle-header" onclick="toggleContent('academic')">
-                                ACADEMIA
-                            </div>
-                            <div id="academic" class="toggle-content">
-                                I am currently pursuing a PhD in Information Studies at UCLA under the supervision of Ramesh Srinivasan at the Digital Cultures Lab. I hold an MSc in Social Data Science from the University of Copenhagen, where my thesis analyzed the practices of 'decentralized governance' within blockchain ecosystems. My academic journey began at Cornell University, where I earned a BA in Performance-Media Arts with minors in Anthropology and Comparative Literature as a Mellon Mays Undergraduate Fellow.
-                            </div>
-                        </div>
-                    </div>
+                    <p>I was raised in Madrid, with a Danish dad and a Peruvian mom, in an American household. My multicultural perspective might have influenced my interest in the importance of difference in the process of how groups think.</p>
+                    <p>I moved to California, chasing surf, sailing, and I guess the water writ large. Outside of research, I am very much into bodybuilding, long-distance running, and increasingly gymnastics and calisthenics.</p>
                 </div>
             </section>
 
             <section>
                 <div class="inner">
-                    <h2 class="centered-header">CURRENT WORK</h2>
-                    <div class="section-blocks">
-                        <div>
-                            <div class="toggle-header" onclick="toggleContent('daos')">
-                                INNOVATIVE METRICS FOR DAOS
-                            </div>
-                            <div id="daos" class="toggle-content">
-                                My current research investigates the socio-technical dynamics of decentralized governance, particularly in Decentralized Autonomous Organizations (DAOs), with the aim of designing innovative metrics that better capture political decentralization. Utilizing Natural Language Processing, Network Analysis, and agent-based modeling, I analyze participation and representation dynamics to inform more equitable governance systems.
-                            </div>
-                        </div>
-                        <div>
-                            <div class="toggle-header" onclick="toggleContent('disagreement')">
-                                LEVERAGING DISAGREEMENT
-                            </div>
-                            <div id="disagreement" class="toggle-content">
-                                I am also developing tools that treat political antagonism as a valuable asset in decision-making, contributing to frameworks that foster efficient collective intelligence and innovation in digital governance. These efforts align with my broader commitment to advancing sustainable, accountable, and participatory governance models, both online and offline.
-                            </div>
-                        </div>
-                    </div>
+                    <h2 class="centered-header">RESEARCH &amp; ACADEMIA</h2>
+                    <p>I am currently a PhD student in Information Studies at UCLA, where my research centers on AI, swarm intelligence, collective intelligence, and multi-agent systems. I examine how digital protocols, information architectures, and computational systems shape group decision-making and coordination.</p>
+                    <p>My doctoral committee is chaired by Ramesh Srinivasan (UCLA Information Studies), alongside Geoffrey Bowker (UC Irvine), Jonathan Furner (UCLA Information Studies), Peter John Lamberson (UCLA Communication), and Moritz Meyer-ter-Vehn (UCLA Economics).</p>
+                    <p>My work is conducted with ongoing gratitude for the guidance and research funding provided by the UC Berkeley Center for Responsible Decentralized Intelligence (RDI) and the Center for Digital Assets (CDA).</p>
                 </div>
             </section>
             </div>
 
         </div>
 
-        <!-- News Ticker -->
+        <!-- News Ticker (items are loaded from news_updates.csv by assets/js/news-ticker.js; the spans below are only a fallback if that fails) -->
         <div id="news-ticker">
             <div class="news-label">NEWS</div>
             <div class="news-content">
@@ -173,66 +127,45 @@
 
     </div>
 
+    <!-- CV dialog (opened by the CV button in the left panel; logic in assets/js/cv.js) -->
+    <div id="cv-modal" class="cv-modal" style="display:none;" onclick="if (event.target === this) closeCV()">
+        <div id="cv-box" class="cv-box" role="dialog" aria-modal="true" aria-labelledby="cv-dialog-title">
+            <button type="button" class="cv-close" onclick="closeCV()" aria-label="Close">&times;</button>
+            <h2 id="cv-dialog-title" class="cv-title">CV</h2>
+            <div id="verification-container">
+                <p>Please enter your full name and check the box to view the CV:</p>
+                <input type="text" id="full-name" placeholder="Enter your full name">
+                <div>
+                    <input type="checkbox" id="demo-human" name="demo-human">
+                    <label for="demo-human">I am a human</label>
+                </div>
+                <button onclick="checkVerification()">View CV</button>
+            </div>
+            <div id="cv-actions" style="display:none;">
+                <div class="cv-buttons">
+                    <button onclick="printCV()" class="button">Print</button>
+                    <button onclick="downloadCV()" class="button">Download</button>
+                    <button onclick="maximizeCV()" class="button">Maximize</button>
+                </div>
+            </div>
+            <iframe id="cv-preview" class="cv-preview" title="CV preview"></iframe>
+            <p id="cv-preview-msg" class="cv-preview-msg" style="display:none;">The CV file could not be found.</p>
+            <div id="pdf-overlay" style="display:none;">
+                <div class="pdf-overlay-content">
+                    <button onclick="closeMaximize()" class="close-button">×</button>
+                    <iframe id="cv-fullscreen-frame" width="100%" height="100%"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/news-ticker.js"></script>
+    <script src="assets/js/cv.js"></script>
     <script>
-        function toggleContent(id) {
-            const content = document.getElementById(id);
-            content.classList.toggle('active');
-        }
-
-        function checkVerification() {
-            const nameInput = document.getElementById('full-name').value.trim();
-            const checkbox = document.getElementById('demo-human').checked;
-            const cvActions = document.getElementById('cv-actions');
-            const verificationContainer = document.getElementById('verification-container');
-
-            if (nameInput && checkbox) {
-                verificationContainer.style.display = 'none';
-                cvActions.style.display = 'block';
-            } else {
-                alert('Please enter your full name and check the box to proceed.');
-            }
-        }
-
-        function printCV() {
-            const pdfWindow = window.open('CTNG_CV_F2025.pdf', '_blank');
-            pdfWindow.onload = function() {
-                pdfWindow.print();
-            };
-        }
-
-        function downloadCV() {
-            const link = document.createElement('a');
-            link.href = 'CTNG_CV_F2025.pdf';
-            link.download = 'CTNG_CV_F2025.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-
-        function maximizeCV() {
-            const pdfOverlay = document.getElementById('pdf-overlay');
-            pdfOverlay.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeMaximize() {
-            const pdfOverlay = document.getElementById('pdf-overlay');
-            pdfOverlay.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Set active menu item based on current page
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        const menuLinks = document.querySelectorAll('#header nav a');
-        menuLinks.forEach(link => {
-            link.classList.remove('active');
-            if (currentPage === 'index.html' && link.textContent === 'About') {
-                link.classList.add('active');
-            } else if (currentPage === 'publications.html' && link.textContent === 'Publications') {
-                link.classList.add('active');
-            } else if (currentPage === 'tools.html' && link.textContent === 'Stuff') {
-                link.classList.add('active');
-            }
+        // Highlight the tab for the current page
+        var currentPage = window.location.pathname.split("/").pop() || "index.html";
+        document.querySelectorAll("#header nav a").forEach(function (link) {
+            link.classList.toggle("active", link.getAttribute("href") === currentPage);
         });
 
         window.addEventListener('load', function() {

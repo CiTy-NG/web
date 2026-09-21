@@ -14,16 +14,16 @@
         <header id="header">
             <nav>
                 <a href="index.html">About</a>
-                <a href="publications.html">Publications</a>
+                <a href="publications.html">Publications &amp; Projects</a>
                 <a href="tools.html" class="active">Stuff</a>
             </nav>
         </header>
 
         <!-- Main -->
-        <div id="main">
+        <div id="main" class="has-side-panel">
 
             <!-- Left Column -->
-            <div>
+            <div class="side-panel">
                 <!-- Profile Section -->
                 <section class="profile-section">
                     <div class="profile-image-container">
@@ -35,18 +35,26 @@
                         
                         <!-- Introduction Text -->
                         <div class="intro-text">
-                            <p class="intro-prefix">I am an Information Scientist with a passion for</p>
-                            <p class="intro-main">automation, decentralization, and digital protocols for political emancipation</p>
+                            <p class="intro-main">Information Scientist and PhD Student at UCLA.</p>
+                            <p class="intro-prefix">Researching AI, swarm intelligence, collective intelligence, multi-agent systems, and decentralized governance.</p>
                         </div>
-                        
+
                         <!-- Degrees Section -->
                         <div class="degrees-section">
                             <h2 class="degrees-title">Degrees</h2>
                             <div class="degrees-list">
-                                <p>PhD Student in Information Studies, UCLA (current)</p>
+                                <p>PhD Student in Information Studies, UCLA (Current)</p>
                                 <p>MSc in Social Data Science, University of Copenhagen</p>
                                 <p>BA in Performing and Media Arts, Cornell University</p>
-                                <p class="ba-details">(Focus: Digital Media; Minors: Anthropology, Comparative Literature)</p>
+                                <p class="ba-details">(Minors: Anthropology, Comparative Literature)</p>
+                            </div>
+                        </div>
+
+                        <!-- Funding Section -->
+                        <div class="degrees-section">
+                            <h2 class="degrees-title">Funding</h2>
+                            <div class="degrees-list">
+                                <p>Mercatus Fellowship (George Mason University), UC Berkeley Center for Digital Assets (CDA) Research Award, Berkeley RDI AI &amp; Decentralization Award, GSE Predoctoral Research Grant (SSRC / Mellon Mays).</p>
                             </div>
                         </div>
                     </div>
@@ -54,32 +62,9 @@
 
                 <!-- CV Section -->
                 <section>
-                    <h2 class="cv-title">CV</h2>
-                    <div class="pdf-viewer">
-                        <div id="verification-container">
-                            <p>Please enter your full name and check the box to view the CV:</p>
-                            <input type="text" id="full-name" placeholder="Enter your full name">
-                            <div>
-                                <input type="checkbox" id="demo-human" name="demo-human">
-                                <label for="demo-human">I am a human</label>
-                            </div>
-                            <button onclick="checkVerification()">View CV</button>
-                        </div>
-                        <div id="cv-actions" style="display:none;">
-                            <div class="cv-buttons">
-                                <button onclick="printCV()" class="button">Print</button>
-                                <button onclick="downloadCV()" class="button">Download</button>
-                                <button onclick="maximizeCV()" class="button">Maximize</button>
-                            </div>
-                        </div>
-                        <div id="pdf-overlay" style="display:none;">
-                            <div class="pdf-overlay-content">
-                                <button onclick="closeMaximize()" class="close-button">×</button>
-                                <iframe src="CTNG_CV_F2025.pdf" width="100%" height="100%"></iframe>
-                            </div>
-                        </div>
-                    </div>
+                    <button type="button" class="cv-open-button" onclick="openCV()">CV</button>
                 </section>
+
             </div>
 
             <!-- Right Column -->
@@ -92,49 +77,72 @@
                 </div>
             </section>
 
-            <section id="two" class="spotlights">
-                <section>
-                    <a href="https://communityengagement.ucla.edu/programs/los-angeles-data-justice-hub/#data-analysis-walkthroughs" class="image">
-                        <img src="images/LADJH_GIS_Prototype.png" alt="" />
-                    </a>
-                    <div class="content">
-                        <div class="inner">
-                            <h3>Mapping Digital Access and Demographic Interactions in LA</h3>
-                            <p>This mapping tool visualizes how digital access—both internet and computers—interacts with demographic variables in LA County. It serves as an introduction to data justice issues, addressing historical and current concerns about equitable representation and digital infrastructure. The LA Data Justice Hub aims to build on this tool to explore and address data inequities and opportunities for justice.</p>
-                            <ul class="actions">
-                                <li><a href="https://communityengagement.ucla.edu/programs/los-angeles-data-justice-hub/#data-analysis-walkthroughs" class="button">Learn more</a></li>
-                            </ul>
-                        </div>
+            <section class="stuff-dropdowns">
+                <details class="stuff-dropdown">
+                    <summary>Cyber</summary>
+                    <div class="stuff-dropdown-body">
+                            <section id="two" class="spotlights">
+                                <section>
+                                    <a href="ladjh_gis.html" class="image">
+                                        <img src="images/LADJH_home_screenshot.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="inner">
+                                            <h3>Mapping Digital Access and Demographic Interactions in LA</h3>
+                                            <p class="project-note">Part of the <a href="https://communityengagement.ucla.edu/programs/los-angeles-data-justice-hub/">LA Data Justice Hub</a></p>
+                                            <p>This mapping tool visualizes how digital access—both internet and computers—interacts with demographic variables in LA County. It serves as an introduction to data justice issues, addressing historical and current concerns about equitable representation and digital infrastructure. The LA Data Justice Hub aims to build on this tool to explore and address data inequities and opportunities for justice.</p>
+                                            <ul class="actions">
+                                                <li><a href="ladjh_gis.html" class="button">Learn more</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section>
+                                    <a href="VeriForm.html" class="image">
+                                        <img src="images/VeriForm_pic.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="inner">
+                                            <h3>Veriform [prototype] - Verifyable, Anonymous Petition Signing Program</h3>
+                                            <p>Anonymous yet verifiable petition-signing platform inspired by UCLA graduate students who felt unable to openly share their opinions on protests due to fears of institutional or popular backlash. By leveraging a unique token and QR verification process, Veriform ensures that every signature is both legitimate and traceable—without revealing personal information. Its local file storage architecture prioritizes privacy, while the system's built-in identity checks guarantee each signer is a unique member of the UCLA community. This combination of anonymity and verifiability empowers users to safely and confidently participate in collective decisions and advocacy.</p>
+                                            <ul class="actions">
+                                                <li><a href="VeriForm.html" class="button">Learn more</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section>
+                                    <a href="https://ownthyface.onrender.com/" class="image">
+                                        <img src="images/otf_pic.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="inner">
+                                            <h3>Own Thy Face [prototype] - Crowdsourced mapping tool to support and incentivize reappropriation of personal data</h3>
+                                            <p>OTF is a GIS-powered web app that incentivizes LA residents to crowdsource CCTV camera locations and photo evidence. Users earn tokens by documenting and verifying surveillance infrastructure, and the platform automatically generates formal letters—addressed to the relevant providers, companies, or city officials—requesting acknowledgment and reappropriation of captured personal data. By aligning with GDPR and CCPA guidelines, this system empowers community members to better understand and advocate for their privacy rights.</p>
+                                            <ul class="actions">
+                                                <li><a href="https://ownthyface.onrender.com/" class="button">Learn more</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                            </section>
                     </div>
-                </section>
-                <section>
-                    <a href="VeriForm.html" class="image">
-                        <img src="images/VeriForm_pic.png" alt="" />
-                    </a>
-                    <div class="content">
-                        <div class="inner">
-                            <h3>Veriform [prototype] - Verifyable, Anonymous Petition Signing Program</h3>
-                            <p>Anonymous yet verifiable petition-signing platform inspired by UCLA graduate students who felt unable to openly share their opinions on protests due to fears of institutional or popular backlash. By leveraging a unique token and QR verification process, Veriform ensures that every signature is both legitimate and traceable—without revealing personal information. Its local file storage architecture prioritizes privacy, while the system's built-in identity checks guarantee each signer is a unique member of the UCLA community. This combination of anonymity and verifiability empowers users to safely and confidently participate in collective decisions and advocacy.</p>
-                            <ul class="actions">
-                                <li><a href="VeriForm.html" class="button">Learn more</a></li>
-                            </ul>
-                        </div>
+                </details>
+
+                <details class="stuff-dropdown">
+                    <summary>Creative</summary>
+                    <div class="stuff-dropdown-body">
+                        <ul class="creative-list">
+                            <li>Calisthenics</li>
+                            <li>Bodybuilding</li>
+                            <li>Surf</li>
+                            <li>Music</li>
+                            <li>Cheffin&#39;</li>
+                            <li>Sailing</li>
+                            <li>Treks</li>
+                        </ul>
                     </div>
-                </section>
-                <section>
-                    <a href="https://ownthyface.onrender.com/" class="image">
-                        <img src="images/otf_pic.png" alt="" />
-                    </a>
-                    <div class="content">
-                        <div class="inner">
-                            <h3>Own Thy Face [prototype] - Crowdsourced mapping tool to support and incentivize reappropriation of personal data</h3>
-                            <p>OTF is a GIS-powered web app that incentivizes LA residents to crowdsource CCTV camera locations and photo evidence. Users earn tokens by documenting and verifying surveillance infrastructure, and the platform automatically generates formal letters—addressed to the relevant providers, companies, or city officials—requesting acknowledgment and reappropriation of captured personal data. By aligning with GDPR and CCPA guidelines, this system empowers community members to better understand and advocate for their privacy rights.</p>
-                            <ul class="actions">
-                                <li><a href="https://ownthyface.onrender.com/" class="button">Learn more</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+                </details>
             </section>
             </div>
 
@@ -170,49 +178,41 @@
 
     </div>
 
+    <!-- CV dialog (opened by the CV button in the left panel; logic in assets/js/cv.js) -->
+    <div id="cv-modal" class="cv-modal" style="display:none;" onclick="if (event.target === this) closeCV()">
+        <div id="cv-box" class="cv-box" role="dialog" aria-modal="true" aria-labelledby="cv-dialog-title">
+            <button type="button" class="cv-close" onclick="closeCV()" aria-label="Close">&times;</button>
+            <h2 id="cv-dialog-title" class="cv-title">CV</h2>
+            <div id="verification-container">
+                <p>Please enter your full name and check the box to view the CV:</p>
+                <input type="text" id="full-name" placeholder="Enter your full name">
+                <div>
+                    <input type="checkbox" id="demo-human" name="demo-human">
+                    <label for="demo-human">I am a human</label>
+                </div>
+                <button onclick="checkVerification()">View CV</button>
+            </div>
+            <div id="cv-actions" style="display:none;">
+                <div class="cv-buttons">
+                    <button onclick="printCV()" class="button">Print</button>
+                    <button onclick="downloadCV()" class="button">Download</button>
+                    <button onclick="maximizeCV()" class="button">Maximize</button>
+                </div>
+            </div>
+            <iframe id="cv-preview" class="cv-preview" title="CV preview"></iframe>
+            <p id="cv-preview-msg" class="cv-preview-msg" style="display:none;">The CV file could not be found.</p>
+            <div id="pdf-overlay" style="display:none;">
+                <div class="pdf-overlay-content">
+                    <button onclick="closeMaximize()" class="close-button">×</button>
+                    <iframe id="cv-fullscreen-frame" width="100%" height="100%"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/news-ticker.js"></script>
+    <script src="assets/js/cv.js"></script>
     <script>
-        function checkVerification() {
-            const nameInput = document.getElementById('full-name').value.trim();
-            const checkbox = document.getElementById('demo-human').checked;
-            const cvActions = document.getElementById('cv-actions');
-            const verificationContainer = document.getElementById('verification-container');
-
-            if (nameInput && checkbox) {
-                verificationContainer.style.display = 'none';
-                cvActions.style.display = 'block';
-            } else {
-                alert('Please enter your full name and check the box to proceed.');
-            }
-        }
-
-        function printCV() {
-            const pdfWindow = window.open('CTNG_CV_F2025.pdf', '_blank');
-            pdfWindow.onload = function() {
-                pdfWindow.print();
-            };
-        }
-
-        function downloadCV() {
-            const link = document.createElement('a');
-            link.href = 'CTNG_CV_F2025.pdf';
-            link.download = 'CTNG_CV_F2025.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-
-        function maximizeCV() {
-            const pdfOverlay = document.getElementById('pdf-overlay');
-            pdfOverlay.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeMaximize() {
-            const pdfOverlay = document.getElementById('pdf-overlay');
-            pdfOverlay.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
         window.addEventListener('load', function() {
             document.body.classList.remove('is-preload');
         });

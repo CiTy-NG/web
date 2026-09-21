@@ -31,6 +31,26 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Full history so the newest CV can be picked by commit date
+          fetch-depth: 0
+      - name: Publish current CV
+        # Pages can't list a folder, so copy the PDF in Curriculum/ (the most recently
+        # committed one, if there are several) to the fixed name the site links to.
+        run: |
+          latest=""
+          latest_ts=0
+          for f in Curriculum/*.pdf; do
+            [ -e "$f" ] || continue
+            ts=$(git log -1 --format=%ct -- "$f")
+            if [ "${ts:-0}" -ge "$latest_ts" ]; then latest="$f"; latest_ts="${ts:-0}"; fi
+          done
+          if [ -z "$latest" ]; then
+            echo "No PDF found in Curriculum/" >&2
+            exit 1
+          fi
+          echo "Using $latest as the current CV"
+          cp "$latest" Curriculum/current.pdf
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

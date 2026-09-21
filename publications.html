@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>CNG - Publications</title>
+    <title>CNG - Publications &amp; Projects</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/minimal.css" />
@@ -14,16 +14,16 @@
         <header id="header">
             <nav>
                 <a href="index.html">About</a>
-                <a href="publications.html" class="active">Publications</a>
+                <a href="publications.html" class="active">Publications &amp; Projects</a>
                 <a href="tools.html">Stuff</a>
             </nav>
         </header>
 
         <!-- Main -->
-        <div id="main">
+        <div id="main" class="has-side-panel">
 
             <!-- Left Column -->
-            <div>
+            <div class="side-panel">
                 <!-- Profile Section -->
                 <section class="profile-section">
                     <div class="profile-image-container">
@@ -35,18 +35,26 @@
                         
                         <!-- Introduction Text -->
                         <div class="intro-text">
-                            <p class="intro-prefix">I am an Information Scientist with a passion for</p>
-                            <p class="intro-main">automation, decentralization, and digital protocols for political emancipation</p>
+                            <p class="intro-main">Information Scientist and PhD Student at UCLA.</p>
+                            <p class="intro-prefix">Researching AI, swarm intelligence, collective intelligence, multi-agent systems, and decentralized governance.</p>
                         </div>
-                        
+
                         <!-- Degrees Section -->
                         <div class="degrees-section">
                             <h2 class="degrees-title">Degrees</h2>
                             <div class="degrees-list">
-                                <p>PhD Student in Information Studies, UCLA (current)</p>
+                                <p>PhD Student in Information Studies, UCLA (Current)</p>
                                 <p>MSc in Social Data Science, University of Copenhagen</p>
                                 <p>BA in Performing and Media Arts, Cornell University</p>
-                                <p class="ba-details">(Focus: Digital Media; Minors: Anthropology, Comparative Literature)</p>
+                                <p class="ba-details">(Minors: Anthropology, Comparative Literature)</p>
+                            </div>
+                        </div>
+
+                        <!-- Funding Section -->
+                        <div class="degrees-section">
+                            <h2 class="degrees-title">Funding</h2>
+                            <div class="degrees-list">
+                                <p>Mercatus Fellowship (George Mason University), UC Berkeley Center for Digital Assets (CDA) Research Award, Berkeley RDI AI &amp; Decentralization Award, GSE Predoctoral Research Grant (SSRC / Mellon Mays).</p>
                             </div>
                         </div>
                     </div>
@@ -54,32 +62,9 @@
 
                 <!-- CV Section -->
                 <section>
-                    <h2 class="cv-title">CV</h2>
-                    <div class="pdf-viewer">
-                        <div id="verification-container">
-                            <p>Please enter your full name and check the box to view the CV:</p>
-                            <input type="text" id="full-name" placeholder="Enter your full name">
-                            <div>
-                                <input type="checkbox" id="demo-human" name="demo-human">
-                                <label for="demo-human">I am a human</label>
-                            </div>
-                            <button onclick="checkVerification()">View CV</button>
-                        </div>
-                        <div id="cv-actions" style="display:none;">
-                            <div class="cv-buttons">
-                                <button onclick="printCV()" class="button">Print</button>
-                                <button onclick="downloadCV()" class="button">Download</button>
-                                <button onclick="maximizeCV()" class="button">Maximize</button>
-                            </div>
-                        </div>
-                        <div id="pdf-overlay" style="display:none;">
-                            <div class="pdf-overlay-content">
-                                <button onclick="closeMaximize()" class="close-button">×</button>
-                                <iframe src="CTNG_CV_F2025.pdf" width="100%" height="100%"></iframe>
-                            </div>
-                        </div>
-                    </div>
+                    <button type="button" class="cv-open-button" onclick="openCV()">CV</button>
                 </section>
+
             </div>
 
             <!-- Right Column -->
@@ -87,65 +72,60 @@
             <section id="one">
                 <div class="inner">
                     <header>
-                        <h1>Publications and written works</h1>
+                        <h1>Publications &amp; Projects</h1>
                     </header>
                 </div>
             </section>
 
-            <section id="two" class="spotlights">
-                <section>
-                    <a href="https://arxiv.org/abs/2510.07575" class="image">
-                        <img src="images/PeerBenchPrePrnt.png" alt="" />
-                    </a>
-                    <div class="content">
-                        <div class="inner">
-                            <h3>Benchmarking is Broken -- Don't Let AI be its Own Judge</h3>
-                            <p>Benchmarking is Broken — Don't Let AI Be Its Own Judge (NeurIPS 2025) — A position paper advocating for a unified and transparent framework to evaluate AI systems. I contributed to the design of PeerBench, a community-governed model for trustworthy AI benchmarking. Preprint available on arXiv.</p>
-                            <p><strong>Co-authors:</strong> Zerui Cheng, Stella Wohnig, Ruchika Gupta, Samiul Alam, Tassallah Abdullahi, João Alves Ribeiro, Saif Mir, Siran Li, Jason Orender, Seyed Ali Bahrainian, Daniel Kirste, Aaron Gokaslan, Mikołaj Glinka, Carsten Eickhoff, Ruben Wolff</p>
-                            <ul class="actions">
-                                <li><a href="https://arxiv.org/abs/2510.07575" class="button">Learn more</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <a href="https://medium.com/flipside-governance/we-read-59-000-dao-forum-posts-so-you-dont-have-to-5e4c516c8a24" class="image">
-                        <img src="images/flipsideArticle_screenshot.png" alt="" />
-                    </a>
-                    <div class="content">
-                        <div class="inner">
-                            <h3>On Computational Discourse Analyses in DAOs - Article for Flipside Governance</h3>
-                            <p>This study leverages advanced language modeling to analyze 59,000 forum posts from 15 decentralized autonomous organizations (DAOs), aiming to identify prevalent governance topics within these communities. Given the vast volume of discourse and the challenges of staying informed, this research highlights the value of computational discourse analysis in uncovering significant themes. Key findings reveal that DAO discussions predominantly focus on two broad categories: scalability issues and governance participation. Under scalability, topics include transaction fees, scaling solutions, and cross-chain interoperability. For governance participation, discussions center on delegation concerns, incentivization, and delegate compensation. This preliminary analysis underscores the importance of computational methods in distilling actionable insights from DAO discussions, offering a streamlined approach for stakeholders to engage with current governance debates and trends.</p>
-                            <ul class="actions">
-                                <li><a href="https://medium.com/flipside-governance/we-read-59-000-dao-forum-posts-so-you-dont-have-to-5e4c516c8a24" class="button">Learn more</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <a href="https://www.caidp.org/about-2/research-group-2022-spring/" class="image">
-                        <img src="images/caidp_aidv2022_screenshot.png" alt="" />
-                    </a>
-                    <div class="content">
-                        <div class="inner">
-                            <h3>AIDVI Report for the CAIDP</h3>
-                            <p>Artificial Intelligence and Democratic Values Index (AIDVI) — A global review of national AI governance frameworks produced by the Center for AI and Digital Policy. I contributed to the Luxembourg Country Report for the 2023 edition, focusing on ethical AI development and regulatory practices in Europe.</p>
-                            <ul class="actions">
-                                <li><a href="https://www.caidp.org/about-2/research-group-2022-spring/" class="button">Learn more</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+            <section class="pub-section">
+                <div class="inner">
+                    <h2 class="pub-heading">Peer-Reviewed &amp; Preprints</h2>
+                    <article class="pub-item">
+                        <h3>Benchmarking is Broken &mdash; Don&#39;t Let AI Be Its Own Judge</h3>
+                        <p class="pub-venue">NeurIPS 2025</p>
+                        <p>Position paper proposing a decentralized, community-governed evaluation framework (PeerBench) to address vulnerabilities in standard AI benchmarks.</p>
+                        <p class="pub-authors"><strong>Co-authors:</strong> Z. Cheng, S. Wohnig, R. Gupta, S. Alam, T. Abdullahi, J.A. Ribeiro, S. Mir, S. Li, J. Orender, C. Nielsen Garcia, S.A. Bahrainian, et al.</p>
+                        <ul class="actions">
+                            <li><a href="https://neurips.cc/virtual/2025/poster/121919" class="button">Link</a></li>
+                        </ul>
+                    </article>
+                    <article class="pub-item">
+                        <h3>The Geometry of Decision-Making in DAOs: An Information-Theoretic Mapping of Consensus and Disagreement in Decentralized Token Voting</h3>
+                        <p class="pub-venue">SSRN Preprint (Under Review)</p>
+                        <p>Proposes an information-theoretic framework using R&eacute;nyi entropy to map voting dynamics across 277 decentralized autonomous organizations.</p>
+                        <ul class="actions">
+                            <li><a href="https://ssrn.com/abstract=6683938" class="button">SSRN Preprint</a></li>
+                        </ul>
+                    </article>
+                </div>
             </section>
+
+            <section class="pub-section">
+                <div class="inner">
+                    <h2 class="pub-heading">Reports &amp; Articles</h2>
+                    <article class="pub-item">
+                        <h3>On Computational Discourse Analysis for DAOs</h3>
+                        <p class="pub-venue">Flipside Governance (2023)</p>
+                        <p>Applied natural language processing across 59,000 DAO forum posts to analyze discussion topics surrounding scaling and governance delegation.</p>
+                        <ul class="actions">
+                            <li><a href="https://medium.com/flipside-governance/we-read-59-000-dao-forum-posts-so-you-dont-have-to-5e4c516c8a24" class="button">Read Article</a></li>
+                        </ul>
+                    </article>
+                    <article class="pub-item">
+                        <h3>Luxembourg AI Country Report</h3>
+                        <p class="pub-venue">Center for AI and Digital Policy (AIDVI 2023)</p>
+                        <p>Policy report analyzing national AI governance strategies, ethical standards, and digital policy regulations in Luxembourg.</p>
+                        <ul class="actions">
+                            <li><a href="https://www.caidp.org/about-2/research-group-2022-spring/" class="button">Policy Report</a></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
             </div>
 
         </div>
 
-        <div style="text-align: center; padding: 2rem 5%;">
-            <ul class="actions">
-                <li><a href="tools.html" class="button">Tools and software</a></li>
-            </ul>
-        </div>
 
         <!-- News Ticker -->
         <div id="news-ticker">
@@ -177,49 +157,41 @@
 
     </div>
 
+    <!-- CV dialog (opened by the CV button in the left panel; logic in assets/js/cv.js) -->
+    <div id="cv-modal" class="cv-modal" style="display:none;" onclick="if (event.target === this) closeCV()">
+        <div id="cv-box" class="cv-box" role="dialog" aria-modal="true" aria-labelledby="cv-dialog-title">
+            <button type="button" class="cv-close" onclick="closeCV()" aria-label="Close">&times;</button>
+            <h2 id="cv-dialog-title" class="cv-title">CV</h2>
+            <div id="verification-container">
+                <p>Please enter your full name and check the box to view the CV:</p>
+                <input type="text" id="full-name" placeholder="Enter your full name">
+                <div>
+                    <input type="checkbox" id="demo-human" name="demo-human">
+                    <label for="demo-human">I am a human</label>
+                </div>
+                <button onclick="checkVerification()">View CV</button>
+            </div>
+            <div id="cv-actions" style="display:none;">
+                <div class="cv-buttons">
+                    <button onclick="printCV()" class="button">Print</button>
+                    <button onclick="downloadCV()" class="button">Download</button>
+                    <button onclick="maximizeCV()" class="button">Maximize</button>
+                </div>
+            </div>
+            <iframe id="cv-preview" class="cv-preview" title="CV preview"></iframe>
+            <p id="cv-preview-msg" class="cv-preview-msg" style="display:none;">The CV file could not be found.</p>
+            <div id="pdf-overlay" style="display:none;">
+                <div class="pdf-overlay-content">
+                    <button onclick="closeMaximize()" class="close-button">×</button>
+                    <iframe id="cv-fullscreen-frame" width="100%" height="100%"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/news-ticker.js"></script>
+    <script src="assets/js/cv.js"></script>
     <script>
-        function checkVerification() {
-            const nameInput = document.getElementById('full-name').value.trim();
-            const checkbox = document.getElementById('demo-human').checked;
-            const cvActions = document.getElementById('cv-actions');
-            const verificationContainer = document.getElementById('verification-container');
-
-            if (nameInput && checkbox) {
-                verificationContainer.style.display = 'none';
-                cvActions.style.display = 'block';
-            } else {
-                alert('Please enter your full name and check the box to proceed.');
-            }
-        }
-
-        function printCV() {
-            const pdfWindow = window.open('CTNG_CV_F2025.pdf', '_blank');
-            pdfWindow.onload = function() {
-                pdfWindow.print();
-            };
-        }
-
-        function downloadCV() {
-            const link = document.createElement('a');
-            link.href = 'CTNG_CV_F2025.pdf';
-            link.download = 'CTNG_CV_F2025.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-
-        function maximizeCV() {
-            const pdfOverlay = document.getElementById('pdf-overlay');
-            pdfOverlay.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeMaximize() {
-            const pdfOverlay = document.getElementById('pdf-overlay');
-            pdfOverlay.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
         window.addEventListener('load', function() {
             document.body.classList.remove('is-preload');
         });
