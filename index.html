@@ -79,18 +79,35 @@
             <div class="main-content">
             <section id="one">
                 <div class="inner">
-                    <h2 class="centered-header">WHO I AM</h2>
-                    <p>I was raised in Madrid, with a Danish dad and a Peruvian mom, in an American household. My multicultural perspective might have influenced my interest in the importance of difference in the process of how groups think.</p>
-                    <p>I moved to California, chasing surf, sailing, and I guess the water writ large. Outside of research, I am very much into bodybuilding, long-distance running, and increasingly gymnastics and calisthenics.</p>
+                    <h2 class="centered-header">RESEARCH &amp; ACADEMIA</h2>
+                    <!-- Types itself out once the page loads (assets/js/type-effects.js); the
+                         paragraphs hold the real text so it still reads fine with JS off. -->
+                    <div id="research-academia-body" class="type-on-load-body">
+                        <p>I am currently a PhD student in Information Studies at UCLA, where my research centers on AI, swarm intelligence, collective intelligence, and multi-agent systems. I examine how digital protocols, information architectures, and computational systems shape group decision-making and coordination.</p>
+                        <p>My doctoral committee is chaired by Ramesh Srinivasan (UCLA Information Studies), alongside Geoffrey Bowker (UC Irvine), Jonathan Furner (UCLA Information Studies), Peter John Lamberson (UCLA Communication), and Moritz Meyer-ter-Vehn (UCLA Economics).</p>
+                        <p>My work is conducted with ongoing gratitude for the guidance and research funding provided by the UC Berkeley Center for Responsible Decentralized Intelligence (RDI) and the Center for Digital Assets (CDA).</p>
+                    </div>
+                    <noscript>
+                        <style>#research-academia-body { display: block; }</style>
+                    </noscript>
                 </div>
             </section>
 
-            <section>
+            <section id="who-i-am-section" class="who-i-am-section">
                 <div class="inner">
-                    <h2 class="centered-header">RESEARCH &amp; ACADEMIA</h2>
-                    <p>I am currently a PhD student in Information Studies at UCLA, where my research centers on AI, swarm intelligence, collective intelligence, and multi-agent systems. I examine how digital protocols, information architectures, and computational systems shape group decision-making and coordination.</p>
-                    <p>My doctoral committee is chaired by Ramesh Srinivasan (UCLA Information Studies), alongside Geoffrey Bowker (UC Irvine), Jonathan Furner (UCLA Information Studies), Peter John Lamberson (UCLA Communication), and Moritz Meyer-ter-Vehn (UCLA Economics).</p>
-                    <p>My work is conducted with ongoing gratitude for the guidance and research funding provided by the UC Berkeley Center for Responsible Decentralized Intelligence (RDI) and the Center for Digital Assets (CDA).</p>
+                    <!-- Stays hidden until Research & Academia finishes typing itself out (assets/js/type-effects.js),
+                         then appears; click its heading to type the text below. The paragraphs hold the real text
+                         so it still reads fine with JS off (see the noscript rule). -->
+                    <h2 id="who-i-am-toggle" class="centered-header who-i-am-toggle" role="button" tabindex="0"
+                        aria-controls="who-i-am-body" aria-expanded="false" onclick="typeWhoIAm()"
+                        onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); typeWhoIAm(); }">WHO I AM</h2>
+                    <div id="who-i-am-body" class="who-i-am-body">
+                        <p>I was raised in Madrid, with a Danish dad and a Peruvian mom, in an American household. My multicultural perspective might have influenced my interest in the importance of difference in the process of how groups think.</p>
+                        <p>I moved to California, chasing surf, sailing, and I guess the water writ large. Outside of research, I am very much into bodybuilding, long-distance running, and increasingly gymnastics and calisthenics.</p>
+                    </div>
+                    <noscript>
+                        <style>#who-i-am-section, .who-i-am-body { display: block; }</style>
+                    </noscript>
                 </div>
             </section>
             </div>
@@ -161,6 +178,7 @@
 
     <script src="assets/js/news-ticker.js"></script>
     <script src="assets/js/cv.js"></script>
+    <script src="assets/js/type-effects.js"></script>
     <script>
         // Highlight the tab for the current page
         var currentPage = window.location.pathname.split("/").pop() || "index.html";

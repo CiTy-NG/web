@@ -1685,3 +1685,45 @@ section:last-child {
         letter-spacing: 0.05em;
     }
 }
+
+/* Typewriter sections on index.html (assets/js/type-effects.js):
+   "RESEARCH & ACADEMIA" types itself out on load; "WHO I AM" stays hidden until that
+   finishes, then appears, and its own text stays hidden until its heading is clicked. */
+.type-on-load-body,
+.who-i-am-body {
+    display: none;
+    min-height: 1.7em;
+}
+
+.type-on-load-body.is-visible,
+.who-i-am-body.is-visible {
+    display: block;
+}
+
+.who-i-am-section {
+    display: none;
+}
+
+.who-i-am-section.is-ready {
+    display: block;
+}
+
+.who-i-am-toggle {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    /* Barely-there outline hints it's clickable; fades away once it's been revealed */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 0.3em 0.6em;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.who-i-am-toggle:hover,
+.who-i-am-toggle:focus-visible {
+    color: #cccccc;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.who-i-am-toggle.is-revealed {
+    border-color: transparent;
+}
